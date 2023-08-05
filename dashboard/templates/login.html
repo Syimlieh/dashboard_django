@@ -1,0 +1,122 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>jbt3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .mb-4, .my-4{text-align: left;margin-bottom: 10px !important;}
+    label {margin-bottom: 5px;}
+    .form-control{background-color: #f3f4f6 !important;
+        border-radius: 1.5rem !important;
+    }
+    .errorlist {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+.card {
+    margin-top: 70px;
+    background-color: #719892;
+    color: aliceblue;
+}
+  </style>
+</head>
+<body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100%;">
+    <div class="container">
+        <!-- Section: Design Block -->
+            <section class="">
+                <!-- Jumbotron -->
+                <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="color: #f3f4f6   ;">
+                <div class="container">
+                    <div class="row gx-lg-5 align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="/static/images/jbt3-logo-png.png" style="width:200px; background-repeat: no-repeat;margin-right: 300px;margin-top: -100px;">
+                        <h6 class="my-4 display-4 fw-bold">
+                        Innovation & <br />
+                        <span>Grant Eligibility<br> Review Application</span>
+                        </h6>
+                        
+                    </div>
+            
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card">
+                        <div class="card-body py-5 px-md-5" style="font-weight: 600;">
+                            <h4>Login</h4>
+                            <br>
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                                </button>
+            
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                                </button>
+            
+                                <a href="#" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                                </a>
+            
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                                </button>
+                            </div>
+                            <br>
+                            <!-- <form>
+                         
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example1">Full name</label>
+                                <input type="text" id="form3Example1" placeholder="John Doe" class="form-control" />
+                            </div>
+                                
+                          
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" id="form3Example3" placeholder="example@gmail.com" class="form-control" />
+                            </div>
+            
+                          
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4">Password</label>
+                                <input type="password" id="form3Example4" placeholder="Enter at least 8+ characters" class="form-control" />
+                            </div>
+                            <br>
+
+                            <button style="text-align:center; background-color: #1dbed6;color: aliceblue;" type="submit" class="btn btn-block mb-4">
+                                Sign up
+                            </button> -->
+
+                            <!--  -->
+                            <form role="form" method="post" action="{% url 'login' %}" style="text-align: left;">
+                                
+                                {% csrf_token %}
+                                {{ form }}
+                                    <button style="text-align:center; margin-top: 20px; border-radius: 30px; background-color: #398376;color: aliceblue;" type="submit" class="btn btn-block mb-4">LOGIN</button>
+                                
+                            </form>
+
+                            <!--  -->
+            
+                            <div class="text-center">
+                                <p>Been here before? <a href="/register">Sign up</a></p>
+                            </div>
+                            <!-- </form> -->
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Jumbotron -->
+            </section>
+            <!-- Section: Design Block -->
+  
+    </div>
+</body>
+</html>

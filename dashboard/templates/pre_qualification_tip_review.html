@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>jbt3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  
+  <style>
+    .pre_qua_tips{ border: 1px solid #63aea9; padding: 5px 39px 0px; color: #63aea9;}
+    .icon_text_ans {margin-top: 25px;margin-left: 28px;}
+    .tabscols>.col {
+    /* border: 1px solid #cfcdcd; */
+    font-size: 12px;
+    background: #ddd;
+    height: 35px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+.tabscols {
+    margin-left: 0px;
+    width: 820px;
+    column-gap: 5px;
+}
+.active {background-color: #63aea9 !important; color: #fff !important;}
+.botom_tab {
+    color: #fff;
+}
+.second_tab {
+    width: 688px;
+    padding-top: 10px;
+}
+.small_tb{
+    text-align: center;
+    border: 1px solid #000;
+    margin-top: 15px;
+    width: 330px;
+    margin-left: 25px;
+    background-color: #fff;
+}
+.col {color: #419283;}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    background: #dfd9ea;
+    transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    vertical-align: middle;
+    cursor: pointer;
+}
+.switch::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background: #fafafa;
+    border-radius: 50%;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.switch:active::before {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
+}
+input:checked + .switch {
+    background: #419283;
+}
+input:checked + .switch::before {
+    left: 27px;
+    background: #fff;
+}
+input:checked + .switch:active::before {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
+}
+
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.tabs {
+  position: relative;
+  margin: 8rem 0;
+  background: #1abc9c;
+  height: 14.75rem;
+}
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+  width: 127px;
+  font-size: 12px;
+}
+.tab-switch {
+  display: none;
+}
+.tab-label {
+  /* position: relative; */
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  background: #fff;
+  color: #1b1919;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+}
+/* .tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+} */
+.tab-content {
+  height: 35.2rem;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem;
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+  transition: all 0.35s;
+}
+.tab-switch:checked + .tab-label {
+  background: #ddd;
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+  background: #f2f2f2;
+}
+.editsave{text-align: right;padding-top: 5px;}
+  </style>
+</head>
+<body style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100%;">
+<div class="container" style="color: aliceblue;">
+    <div class="second_con">
+        <div class="content_con">
+
+    <div class="row">
+        <div class="col-md-9 col-sm-9 col-lg-9">
+            <div class="desc" style="padding-top:60px;">
+                <img src="/static/images/jbt3-logo-png.png" style="width:200px";>
+                <h2 style="text-align: right; margin-top: -135px;">Grantify - A3: Problem & Solution</h2>
+                <p style="text-align: right; font-size: 15px;">Submitted Monday, May 22, 2023 at 03:55PM PDT</p>
+            </div>
+            <div class="titleTab">
+                <table class="table table-borderless" style="background-color: #419283; color: #fff;">
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Company </th>
+                        <th scope="col">Grant</th>
+                        <th scope="col">Industry</th>
+                        <th scope="col">Current Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>James Baker</td>
+                        <td>JBT3</td>
+                        <td>Innovate</td>
+                        <td>Technology</td>
+                        <td>20</td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            
+        <div class="botom_tab">
+            <div class="second_tab" style="padding-top:20px;">
+                <div class="row">
+                    <div class="col-8">1.&nbsp;&nbsp;What is the big issue you're addressing?</div>
+                </div>
+                
+                <div class="row tabscols">
+                    <div class="col">&#128557; No</div>
+                    <div class="col">&#128531; some</div>
+                    <div class="col">&#128577; Innovate</div>
+                    <div class="col active">&#128519; Highly Innovate</div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>JBT3 Scope</p>
+                    <div class="switch_btn">
+                        <input type="checkbox" hidden="hidden" id="scope_1">
+                        <label class="switch" for="scope_1"></label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="second_tab">
+                <div class="row">
+                    <div class="col-8">2.&nbsp;&nbsp;What is the key technical challenge or reason why the problem has not yet been solved?</div>
+                   </div>
+                
+                <div class="row tabscols">
+                    <div class="col">&#128557; No</div>
+                    <div class="col">&#128531; some</div>
+                    <div class="col">&#128577; Innovate</div>
+                    <div class="col active">&#128519; Highly Innovate</div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>JBT3 Scope</p>
+                    <div class="switch_btn">
+                        <input type="checkbox" hidden="hidden" id="scope_2">
+                        <label class="switch" for="scope_2"></label>
+                    </div>
+                  </div>
+            </div>
+            <br>
+            <div class="second_tab">
+                <div class="row">
+                    <div class="col-8">3.&nbsp;&nbsp;Is the problem described in 3-A1 and 3A2 disproportionately affecting a certain ethnic, socioeconomic location of the UK or other group.</div>
+                 </div>
+                
+                <div class="row tabscols">
+                    <div class="col">&#128557; No</div>
+                    <div class="col">&#128531; some</div>
+                    <div class="col">&#128577; Innovate</div>
+                    <div class="col active">&#128519; Highly Innovate</div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>JBT3 Scope</p>
+                    <div class="switch_btn">
+                        <input type="checkbox" hidden="hidden" id="scope_3">
+                        <label class="switch" for="scope_3"></label>
+                    </div>
+                  </div>
+            </div>
+            <br>
+            <div class="second_tab">
+                <div class="row">
+                    <div class="col-8">4.&nbsp;&nbsp;Is this project commercially risky</div>
+                </div>
+                
+                <div class="row tabscols">
+                    <div class="col">&#128557; No</div>
+                    <div class="col">&#128531; some</div>
+                    <div class="col">&#128577; Innovate</div>
+                    <div class="col active">&#128519; Highly Innovate</div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>JBT3 Scope</p>
+                    <div class="switch_btn">
+                        <input type="checkbox" hidden="hidden" id="scope_4">
+                        <label class="switch" for="scope_4"></label>
+                    </div>
+                  </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-lg-3">
+            <div class="wrapper">
+            <div class="tabs">
+                <div class="tab">
+                    <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+                    <label for="tab-1" class="tab-label">Assessor Tips</label>
+                    <div class="tab-content">
+                        <div class="pre_qua_tips">
+                          <label class="">Problem & Solution Tips</label>
+                        </div>
+                        <div class="row">
+                                <div class="col-sm-3" style="margin-top: 20px;"><img src="/static/images/JBT3-logo-black-large.png" style="width:40px;"></div>
+                                <div class="col-sm-9" style="margin-top: 20px;"><p style="font-weight: 600; color: #419283;">Question 3-A1</p>
+                                <p style="margin-bottom: 2px; font-weight: 600;">The Problem Statement</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                <p style="margin-bottom: 2px; font-weight: 600;">Tips</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                           
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3" style="margin-top: 20px;"><img src="/static/images/JBT3-logo-black-large.png" style="width:40px;"></div>
+                            <div class="col-sm-9" style="margin-top: 20px;"><p style="font-weight: 600; color: #419283;">Question 3-A2</p>
+                            <p style="margin-bottom: 2px; font-weight: 600;">Technical Complexity</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p style="margin-bottom: 2px; font-weight: 600;">Tips</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                       
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+                    <label for="tab-2" class="tab-label">Feedback</label>
+                    <div class="tab-content">
+                        <div class="switch_btn">
+                            <label style="color: #419283;">All</label>
+                            <input type="checkbox" hidden="hidden" id="fed">
+                            <label class="switch" for="fed"></label>
+                        </div>
+                        <div class="pro_ques">
+                            <label for="quest_num" style="font-size: 11px;">Provide feedback for which question?</label>
+                            <input style="width: 100%;border-color: #419283;" type="text" placeholder="ENTER QUESTION NUMBER">
+                        </div>
+                        <div class="editsave">
+                            <button class="edit" style="width: 25%;font-size: 10px;border-color: #419283;color: #419283;">Edit</button> &nbsp;&nbsp; <button class="save" style="width: 25%;font-size: 10px;background-color: #419283;border-color:#419283;color: #fff;">Save</button>
+                        </div>
+
+                        <!-- AI Analysis -->
+
+                        <div class="ai_analy" style="padding-top: 25px;">
+                            <label style="color: #419283;">AI Analyze</label>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <input style="width: 100%;border-color: #419283;" type="text" Placeholder="ENTER CLIENT ANSWER" >
+                        </div>
+                        <div class="editsave">
+                            <button type="clear" class="clear" style="width: 25%;font-size: 10px;border-color: #419283;color: #419283;">Clear</button> &nbsp;&nbsp; <button class="save" style="width: 25%;font-size: 10px;background-color: #419283;border-color:#419283;color: #fff;">Analyze</button>
+                        </div>
+
+                        <!-- AI feedback -->
+                        <div class="ai_feeback" style="padding-top: 25px;">
+                            <label style="color: #419283;">AI Feedback</label>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
+                        <div class="editsave">
+                            <button class="edit" style="width: 25%;font-size: 10px;border-color: #419283;color: #419283;">Edit</button> &nbsp;&nbsp; <button class="save" style="width: 25%;font-size: 10px;background-color: #419283;border-color:#419283;color: #fff;">Save</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function() {
+    $(".col").click(function () {
+        $(".col").removeClass("active");
+        $(this).addClass("active");   
+    });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+    $("#feedback").click(function(){
+        $(".icon_text_ans").hide();
+        $(".feedback_All").show();
+    });
+    $("#asses_tips").click(function(){
+        $(".icon_text_ans").show();
+        $(".feedback_All").hide();
+    });
+    });
+</script>
+</body>
+</html>

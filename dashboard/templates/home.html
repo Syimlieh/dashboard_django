@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>jbt3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style>
+  html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+  .card-body {
+    padding: 1.5rem;
+  }
+    .second_con{
+    width: 900px;
+    margin-left: 100px;
+    height: 600px;
+    border-radius: 20px;
+}
+/* .content_con {
+    width: 700px;
+    margin-left: 100px;
+} */
+.active {background-color:#d2ebd5;}
+  </style>
+</head>
+{% block content %}
+<body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
+<div class="container">
+  <div class="second_con">
+    <div class="content_con">
+    <div class="heading" style="color: aliceblue; margin-top: 40px;">
+      <img src="/static/images/jbt3-logo-png.png" style="width:200px; background-repeat: no-repeat;margin-left: -35px;">
+        <h1>Which grant is the client applying for?</h1>
+    </div>
+    <div class="error" style="color: rgb(205, 47, 76);font-weight: 600;">{{message}}</div>
+    <form method="post">
+      {% csrf_token %}
+    <div class="row" style="color:#4d545f; margin-top: 60px;">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <input type="radio" name="choicechk" value="SBIR" class="form-control" style="width:13px;">
+              <p style="margin-top: 25px;margin-bottom: 10px;" class="card-text">SBIR</p>
+              <p class="card-text">US Grant</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <input type="radio" name="choicechk" value="Smart Innovate" class="form-control" style="width:13px;">
+              <p style="margin-top: 25px;margin-bottom: 10px;" class="card-text">Smart Innovate</p>
+              <p class="card-text">UK Grant</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <input type="radio" name="choicechk" class="form-control" value="EIC Accerlarator" style="width:13px;">
+                <p style="margin-top: 25px;margin-bottom: 10px;" class="card-text">EIC Accerlarator</p>
+                <p class="card-text">Europian Grant</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <br><br>
+      <div class="btn_cont">
+        <button id="next_proceed" type="submit" class="btn" style="background-color: #378a65; color: #d2ebd5; width: 25%;">Continue
+            <span class="glyphicon glyphicon-menu-down"></span>
+          </button>
+      </div>
+     </form>
+  </div>
+</div>
+</div>   
+<script>
+$(document).ready(function() {
+$(".card").click(function () {
+    $(".card").removeClass("active");
+    // $(".tab").addClass("active"); // instead of this do the below 
+    $(this).addClass("active");   
+});
+});
+</script> 
+<!-- <script>
+$('#next_proceed').click(function() {
+    window.location.href = '/pre/qualification/feed';
+    return false;
+});
+</script> -->
+</body>
+{% endblock %}
+</html>

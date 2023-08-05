@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>jbt3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style>
+  html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+  .card-body {
+    padding: 1.5rem;
+  }
+    .second_con{
+    width: 900px;
+    margin-left: 100px;
+    height: 600px;
+    border-radius: 20px;
+}
+/* .content_con {
+    width: 700px;
+    margin-left: 100px;
+} */
+.active {background-color:#d2ebd5;}
+.buttons > button {
+    width: 80px;
+    font-size: 12px;
+}
+textarea {
+    background: #52ad9c;
+    border: none;
+}
+  </style>
+</head>
+{% block content %}
+<body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
+<div class="container">
+  <div class="second_con">
+    <div class="content_con">
+    <div class="heading" style="color: aliceblue; margin-top: 40px;">
+      <img src="/static/images/jbt3-logo-png.png" style="width:200px; background-repeat: no-repeat;margin-left: -35px;">
+        <p style="font-size: 1.9rem;"> Based on the information provided this is what we understand about your project</p>
+    </div>
+    <div class="error" style="color: rgb(205, 47, 76);font-weight: 600;">{{message}}</div>
+    <form method="post">
+      {% csrf_token %}
+    <div class="rad_ad" style="color:#f0f2f6; margin-top: 50px;font-size: 1.2rem;">
+        <div class="raid_ch">
+            <textarea class="textarea" rows="4" cols="87">{{ response.message }}</textarea>
+        </div>
+        <div class="buttons">
+            <button class="edit" style="border: none;color: #378a65;">EDIT</button>
+            <button class="accept" style="background-color: #378a65;color: #d2ebd5;border: none;">ACCEPT</button>
+            <button class="tryagain" style="border: none;color: #378a65;">TRY AGAIN</button>
+        </div>
+    </div>
+      <br><br>
+      <div class="btn_cont">
+        <button id="next_proceed" type="button" class="btn" style="background-color: #378a65; color: #d2ebd5; width: 25%;">Continue
+            <span class="glyphicon glyphicon-menu-down"></span>
+          </button>
+      </div>
+     </form>
+  </div>
+</div>
+</div>   
+<script>
+$(document).ready(function() {
+$(".card").click(function () {
+    $(".card").removeClass("active");
+    // $(".tab").addClass("active"); // instead of this do the below 
+    $(this).addClass("active");   
+});
+});
+</script> 
+<script>
+$('#next_proceed').click(function() {
+    window.location.href = '/home';
+    return false;
+});
+</script>
+</body>
+{% endblock %}
+</html>

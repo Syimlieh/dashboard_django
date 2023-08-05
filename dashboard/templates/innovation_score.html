@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>jbt3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style>
+    .gauge {
+  width: 100%;
+  max-width: 250px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: #004033;
+  margin-left: 600px;
+  margin-top: -190px;
+}
+
+.gauge__body {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: #b4c0be;
+  position: relative;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  overflow: hidden;
+}
+
+.gauge__fill {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background: #009578;
+  transform-origin: center top;
+  transform: rotate(0.25turn);
+  transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+  width: 75%;
+  height: 150%;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+}
+.center_div {
+  margin-top: 50px;
+  width: 80%;
+  margin-left: 100px;
+}
+.card-body {
+    padding: 2.5rem !important;
+}
+  </style>
+</head>
+
+<body style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100%;">
+
+<div class="container" style="color: aliceblue;border-radius: 25px;">
+  <div class="center_div">
+    <br>
+    <h2> jbt3</h2>
+    <br>
+    <p style="font-size: 30px;">Innovation Score</p>
+    <div class="innovationScore">
+        <div class="card" style="background-color: #1d2128;color: aliceblue;">
+            <div class="card-body">
+              <h5 class="card-title">Innovative</h5>
+              <p class="card-text">The project have several strengths and is <br> competitive for grant funding. 
+                Some minor <br> improvements may be needed but overall the<br> proposal is strong.</p>
+            </div>
+            <div class="gauge">
+                <div class="gauge__body">
+                  <div class="gauge__fill"></div>
+                  <div class="gauge__cover"></div>
+                </div>
+                
+                <label style="color: #009578;font-size: 12px;margin-left: 60px;">Grant Qualification Score</label>
+              </div>
+          </div>
+    </div>
+
+    <br><br>
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <input type="radio" class="form-control" style="width: 12px;">
+              <p class="card-text" style="margin-top: 25px; color: rgb(39, 39, 40);">Feasibility study</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+                <input type="radio" class="form-control" style="width: 12px;">
+              <p class="card-text" style="margin-top: 25px; color: rgb(39, 39, 40);">Project scoping</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <input type="radio" class="form-control" style="width: 12px;">
+                <p class="card-text" style="margin-top: 25px;color: rgb(39, 39, 40);">Technical diagrams</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <br><br>
+      <div class="btn_cont" style="text-align: right;">
+        <button type="button" style="color: #bc792c; background-color: #121212; border-color: #bc792c; border-radius: 5px;">Add to quote</button> &nbsp;&nbsp;
+        <button type="button" style="color: #121212; background-color: #2dd75a;border-radius: 5px;">Export result</button>
+      </div>
+      <br>
+      <div class="btn_cont">
+        <button type="button" style="background-color: #378a65;color: aliceblue; border-color: #378a65;" class="btn btn-primary">Continue
+            <span class="glyphicon glyphicon-menu-down"></span>
+          </button>
+      </div>
+      <br>
+    </div>
+    </div>
+</div>
+
+<script>
+    const gaugeElement = document.querySelector(".gauge");
+
+function setGaugeValue(gauge, value) {
+  if (value < 0 || value > 1) {
+    return;
+  }
+
+  gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+    value / 2
+  }turn)`;
+  gauge.querySelector(".gauge__cover").textContent = `${Math.round(
+    value * 100
+  )}%`;
+}
+
+setGaugeValue(gaugeElement, 0.3);
+
+</script>
+</body>
+</html>
