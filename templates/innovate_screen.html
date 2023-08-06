@@ -21,8 +21,8 @@
     padding: 1.5rem;
   }
     .second_con{
-    width: 900px;
-    margin-left: 100px;
+    width: 100%;
+    margin: auto;
     height: 600px;
     border-radius: 20px;
 }
@@ -34,10 +34,43 @@
 .buttons > button {
     width: 80px;
     font-size: 12px;
+    outline: none;
+    cursor: pointer;
+}
+input{
+  outline: none;
 }
 textarea {
     background: #52ad9c;
     border: none;
+    width: 40%;
+    outline: none;
+}
+.heading p{
+  width:75%;
+}
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { 
+  .heading p{
+    width:100%;
+  }
+
+  .textarea {
+    width: 100%;
+  }
+}
+ 
+@media all and (max-width: 480px) { 
+  .heading p{
+    width:100%;
+  }
+
+  .textarea {
+    width: 100%;
+  }
 }
   </style>
 </head>
@@ -55,7 +88,7 @@ textarea {
       {% csrf_token %}
     <div class="rad_ad" style="color:#f0f2f6; margin-top: 50px;font-size: 1.2rem;">
         <div class="raid_ch">
-            <textarea class="textarea" rows="4" cols="87">{{ response.message }}</textarea>
+            <textarea class="textarea" rows="4" >{{ response.message }}</textarea>
         </div>
         <div class="buttons">
             <button class="edit" style="border: none;color: #378a65;">EDIT</button>
@@ -65,8 +98,11 @@ textarea {
     </div>
       <br><br>
       <div class="btn_cont">
-        <button id="next_proceed" type="button" class="btn" style="background-color: #378a65; color: #d2ebd5; width: 25%;">Continue
+        <button id="next_proceed" type="button" class="btn" style="background-color: #378a65; color: #d2ebd5;border-radius: 25px; border-top:none; border-bottom: none;background-color: #52aa9a; /* For browsers that do not support gradients */
+        background-image: linear-gradient(#32685e,#52aa9a );display: flex;align-items: center;justify-content: space-between;">Continue
             <span class="glyphicon glyphicon-menu-down"></span>
+            <svg xmlns="http://www.w3.org/2000/svg"  width="35px"
+            height="20px" viewBox="0 0 24 24"><title>Artboard-9</title><g id="Right-3" data-name="Right"><path  d="M21.707,11.293l-7-7A1,1,0,0,0,13,5V8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H13v3a1,1,0,0,0,1.707.707l7-7A1,1,0,0,0,21.707,11.293Z" style="fill:#ffffff"/></g></svg>
           </button>
       </div>
      </form>

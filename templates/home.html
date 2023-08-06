@@ -21,16 +21,101 @@
     padding: 1.5rem;
   }
     .second_con{
-    width: 900px;
-    margin-left: 100px;
+    width: 100%;
+    margin: auto;
     height: 600px;
     border-radius: 20px;
+}
+.fCard{
+  background-color: #8cada8;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+}
+.sCard{
+  background-color: #63aea9;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+}
+.tCard{
+  background-color: #52ad9c;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+}
+input[type='radio']{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px !important;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+  text-align: center;
+  background: none !important;
+  background-color: transparent !important; 
+  outline: none; /* Remove outline on focus */
+  margin: 0; /* Remove default margin */
+  border: 2px solid white; /* Add a white border for the outline */
+  border-radius: 50%;
+  position: relative; /* Add relative position */
+  box-shadow: unset ;
+}
+
+input[type="radio"]:checked:before {
+  content: "";
+  position: absolute; /* Position the filled part absolutely */
+  top: 3px; /* Adjust the vertical position */
+  left: 4px; /* Adjust the horizontal position */
+  width: 10px; /* Adjust the size */
+  margin: auto;
+  box-shadow: unset !important;
+  text-align: center;
+  height: 10px; /* Adjust the size */
+  border-radius: 50%;
+  background-color: #fff; /* Set the color for checked radio button */
+  
+}
+.form-control:focus {
+  box-shadow: unset !important;
+  border-color: #fff !important;
 }
 /* .content_con {
     width: 700px;
     margin-left: 100px;
 } */
 .active {background-color:#d2ebd5;}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .card{
+    margin-bottom: 1rem;
+  }
+  .btn_count{
+    margin-bottom: 1rem;
+  }
+  .post{
+    padding-bottom: 1rem;
+  }
+ }
+ 
+@media all and (max-width: 480px) {
+  .card{
+    margin-bottom: 1rem;
+  }
+  .btn_count{
+    margin-bottom: 1rem;
+  }
+  .post{
+    padding-bottom: 1rem;
+  }
+ }
   </style>
 </head>
 {% block content %}
@@ -47,28 +132,28 @@
       {% csrf_token %}
     <div class="row" style="color:#4d545f; margin-top: 60px;">
         <div class="col-sm-4">
-          <div class="card">
+          <div class="card fCard">
             <div class="card-body">
-              <input type="radio" name="choicechk" value="SBIR" class="form-control" style="width:13px;">
-              <p style="margin-top: 25px;margin-bottom: 10px;" class="card-text">SBIR</p>
+              <input type="radio" name="choicechk" value="SBIR" class="form-control" style="width:13px; margin: auto; margin: auto;" checked>
+              <h4 style="margin-top: 25px;margin-bottom: 25px;" class="card-text m-auto">SBIR</h4>
               <p class="card-text">US Grant</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="card">
+          <div class="card sCard">
             <div class="card-body">
-              <input type="radio" name="choicechk" value="Smart Innovate" class="form-control" style="width:13px;">
-              <p style="margin-top: 25px;margin-bottom: 10px;" class="card-text">Smart Innovate</p>
+              <input type="radio" name="choicechk" value="Smart Innovate" class="form-control" style="width:13px; margin: auto;">
+              <h4 style="margin-top: 25px;margin-bottom: 25px;" class="card-text m-auto">Smart Innovate</h4>
               <p class="card-text">UK Grant</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
-            <div class="card">
+            <div class="card tCard">
               <div class="card-body">
-                <input type="radio" name="choicechk" class="form-control" value="EIC Accerlarator" style="width:13px;">
-                <p style="margin-top: 25px;margin-bottom: 10px;" class="card-text">EIC Accerlarator</p>
+                <input type="radio" name="choicechk" class="form-control" value="EIC Accerlarator" style="width:13px; margin: auto;">
+                <h4 style="margin-top: 25px;margin-bottom: 25px;" class="card-text m-auto">EIC Accerlarator</h4>
                 <p class="card-text">Europian Grant</p>
               </div>
             </div>
@@ -76,8 +161,11 @@
       </div>
       <br><br>
       <div class="btn_cont">
-        <button id="next_proceed" type="submit" class="btn" style="background-color: #378a65; color: #d2ebd5; width: 25%;">Continue
+        <button id="next_proceed" type="submit" class="btn" style="background-color: #378a65; color: #d2ebd5;border-radius: 25px; border-top:none; border-bottom: none;background-color: #52aa9a; /* For browsers that do not support gradients */
+        background-image: linear-gradient(#32685e,#52aa9a );display: flex;align-items: center;justify-content: space-between;">Continue
             <span class="glyphicon glyphicon-menu-down"></span>
+            <svg xmlns="http://www.w3.org/2000/svg"  width="35px"
+            height="20px" viewBox="0 0 24 24"><title>Artboard-9</title><g id="Right-3" data-name="Right"><path  d="M21.707,11.293l-7-7A1,1,0,0,0,13,5V8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H13v3a1,1,0,0,0,1.707.707l7-7A1,1,0,0,0,21.707,11.293Z" style="fill:#ffffff"/></g></svg>
           </button>
       </div>
      </form>

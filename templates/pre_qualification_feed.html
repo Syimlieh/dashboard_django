@@ -160,9 +160,9 @@ input:checked + .switch:active::before {
     <div class="second_con">
         <div class="content_con">
 
-    <div class="row">
+    <div class="row" style="padding-top:60px; padding-bottom: 80px;">
         <div class="col-md-9 col-sm-9 col-lg-9">
-            <div class="desc" style="padding-top:60px;">
+            <div class="desc" >
                 <img src="/static/images/jbt3-logo-png.png" style="width:200px";>
                 <h2 style="text-align: right; margin-top: -135px;">JBT3 - PRE Qualification</h2>
                 <p style="text-align: right; font-size: 15px;">Submitted Monday, May 22, 2023 at 03:55PM PDT</p>
@@ -171,20 +171,20 @@ input:checked + .switch:active::before {
                 <table class="table table-borderless" style="background-color: #419283; color: #fff;">
                     <thead>
                     <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Company </th>
-                        <th scope="col">Grant</th>
-                        <th scope="col">Industry</th>
-                        <th scope="col">Current Score</th>
+                        <td scope="col">Name</td>
+                        <td scope="col">Company </td>
+                        <td scope="col">Grant</td>
+                        <td scope="col">Industry</td>
+                        <td scope="col">Current Score</td>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>{{request.user.username}}</td>
-                        <td>JBT3</td>
-                        <td>Innovate</td>
-                        <td>Technology</td>
-                        <td>20</td>
+                        <td><b>{{request.user.username}}<b></td>
+                        <td><b>JBT3</b></td>
+                        <td><b>Innovate</b></td>
+                        <td><b>Technology</b></td>
+                        <td><b>20</b></td>
                     </tr>
                     
                     </tbody>
