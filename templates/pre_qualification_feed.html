@@ -19,6 +19,7 @@
     background: #ddd;
     height: 35px;
     padding-top: 8px;
+    border-radius: 15px;
     cursor: pointer;
 }
 .tabscols {
@@ -31,8 +32,11 @@
     color: #fff;
 }
 .second_tab {
-    width: 688px;
+    width: 100%;
     padding-top: 10px;
+}
+.second_tab b{
+    padding-bottom: .8rem ;
 }
 .small_tb{
     text-align: center;
@@ -90,6 +94,7 @@ input:checked + .switch:active::before {
   margin: 8rem 0;
   background: #1abc9c;
   height: 14.75rem;
+  
 }
 .tabs::before,
 .tabs::after {
@@ -151,17 +156,89 @@ input:checked + .switch:active::before {
   transition: all 0.35s;
   background: #f2f2f2;
 }
+.second_con{
+    margin-bottom: 10rem;
+}
 .editsave{text-align: right;padding-top: 5px;}
+.editsave .edit{ background-color: #fff; border: 1px solid #419283;}
+.editsave .save{border: 1px solid #419283;}
+.editsave .clear{
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.editsave .anelyze{
+    border: 1px solid #000;
+}
+.save{
+    background-color: #000;border:1px solid #000;color: #fff;
+}
+.pro_ques input, .ai_analy input{
+ text-align: center;   
+ border: 1px solid #1abc9c;
+}
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+.tabs .tab{
+    width:50%;
+}
+.tabscols{
+    width: 100%;
+    
+}
+.table-borderless {
+    display: flex;
+    flex-direction: column;
+}
+.tabscols>.col {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.tab .tab-content{
+    width: 100%;
+}
+ }
+ 
+@media all and (max-width: 480px) {
+    .tabs .tab{
+    width:50%;
+}
+.table-borderless {
+    display: flex;
+    flex-direction: column;
+}
+.tabscols{
+    width: 100%;
+}
+.tabscols .col{
+    flex: 0 0 100%;
+    margin-bottom: .5rem;
+}
+.tab .tab-content{
+    width: 100%;
+}
+.tabs{
+    margin-bottom: 8rem ;
+    margin-top: 1rem;
+}
+ }
+
+
+
   </style>
 </head>
 {% block content %}
-<body style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100%;">
+<body style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
 <div class="container" style="color: aliceblue;">
     <div class="second_con">
         <div class="content_con">
 
-    <div class="row" style="padding-top:60px; padding-bottom: 80px;">
-        <div class="col-md-9 col-sm-9 col-lg-9">
+    <div class="row" >
+        <div class="col-md-12 col-12 col-lg-9" style="padding-top:60px; ">
             <div class="desc" >
                 <img src="/static/images/jbt3-logo-png.png" style="width:200px";>
                 <h2 style="text-align: right; margin-top: -135px;">JBT3 - PRE Qualification</h2>
@@ -194,8 +271,8 @@ input:checked + .switch:active::before {
             
         <div class="botom_tab">
             <div class="second_tab" style="padding-top:20px;">
-                <div class="row">
-                    <div class="col-8">1.&nbsp;&nbsp;Is this project technically Innovative</div>
+                <div class="row mb-2">
+                    <div class="col-8"><b>1.&nbsp;&nbsp;Is this project technically Innovative</b></div>
                 </div>
                 
                 <div class="row tabscols">
@@ -213,8 +290,8 @@ input:checked + .switch:active::before {
             </div>
             <br>
             <div class="second_tab">
-                <div class="row">
-                    <div class="col-8">2.&nbsp;&nbsp;Is the R&D Challenging</div>
+                <div class="row mb-2">
+                    <div class="col-8"><b>2.&nbsp;&nbsp;Is the R&D Challenging</b></div>
                    </div>
                 
                 <div class="row tabscols">
@@ -232,8 +309,8 @@ input:checked + .switch:active::before {
             </div>
             <br>
             <div class="second_tab">
-                <div class="row">
-                    <div class="col-8">3.&nbsp;&nbsp;Does this project have a big commercial upside</div>
+                <div class="row mb-2">
+                    <div class="col-8"><b>3.&nbsp;&nbsp;Does this project have a big commercial upside</b></div>
                  </div>
                 
                 <div class="row tabscols">
@@ -251,8 +328,8 @@ input:checked + .switch:active::before {
             </div>
             <br>
             <div class="second_tab">
-                <div class="row">
-                    <div class="col-8">4.&nbsp;&nbsp;Is this project commercially risky</div>
+                <div class="row mb-2">
+                    <div class="col-8"><b>4.&nbsp;&nbsp;Is this project commercially risky</b></div>
                 </div>
                 
                 <div class="row tabscols">
@@ -271,7 +348,7 @@ input:checked + .switch:active::before {
             </div>
         </div>
 
-        <div class="col-md-3 col-sm-3 col-lg-3">
+        <div class="col-md-12 col-12 col-lg-3">
             <div class="wrapper">
             <div class="tabs">
                 <div class="tab">
@@ -330,7 +407,7 @@ input:checked + .switch:active::before {
                             <input style="width: 100%;border-color: #419283;" type="text" Placeholder="ENTER CLIENT ANSWER" >
                         </div>
                         <div class="editsave">
-                            <button type="clear" class="clear" style="width: 25%;font-size: 10px;border-color: #419283;color: #419283;">Clear</button> &nbsp;&nbsp; <button class="save" style="width: 25%;font-size: 10px;background-color: #419283;border-color:#419283;color: #fff;">Analyze</button>
+                            <button type="clear" class="clear" style="width: 25%;font-size: 10px;">Clear</button> &nbsp;&nbsp; <button class="save anelyze" style="width: 25%;font-size: 10px;">Analyze</button>
                         </div>
 
                         <!-- AI feedback -->
