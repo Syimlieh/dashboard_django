@@ -6,126 +6,399 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <style>
-  html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
-  .card-body {
-    padding: 1.5rem;
-  }
-    .second_con{
-    width: 900px;
-    margin-left: 100px;
-    height: 600px;
-    border-radius: 20px;
-}
-/* .content_con {
-    width: 700px;
-    margin-left: 100px;
-} */
-.active {background-color:#d2ebd5;}
-.input_features > label {
-    margin-right: 40px;
-    margin-left: 45px;
-}
-.input_features > .edit_btn {
-    margin-right: 5px;
-    margin-left: 85px;
-    margin-top: 4px;
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    .second_con {
+      width: 100%;
+      margin: auto;
+      height: 600px;
+      border-radius: 20px;
+    }
+    textarea, input{
+      outline: none;
+      padding: .3rem;
 
+    }
+    .btnCollection button{
+      margin-right: 1rem;
+      background-color: #fff;
+      /* padding:.5rem .8rem; */
+      border-radius: 10px;
+      width: 100%;
+    }
+    .radio_tnm{
+      color: #5a9893;
+    }
+    /* .content_con {
+  width: 700px;
+  margin-left: 100px;
+} */
+input[type='radio']{
+accent-color:#5a9893;
+/* width: 20px;
+height: 20px;
+background-color: transparent !important;  */
 }
-.input_features > input[type="radio"] {
-    margin-right: 48px;
+.textEnd{
+  text-align: end;
 }
-.input_features_comp > label {
-    margin-left: 24px;
-}
-.input_features_comp > .radio_tnm {
-    margin-left: 81px;
-    margin-right: -71px;
-}
-.input_features_comp > .radio_tnm {
-    margin-left: 81px;
-    margin-right: -71px;
-    width: 125px;
-    height: 30px;
-    border-radius: 10px;
-}
-.input_features_comp .edit_btn_com {
-    margin-left: 53px;
-    margin-right: 6px;
-    margin-top: 4px;
-}
+
+    .active {
+      background-color: #d2ebd5;
+    }
+    .input_features > label {
+      margin-right: 40px;
+      margin-left: 45px;
+    }
+    .input_features > .edit_btn {
+      margin-right: 5px;
+      margin-left: 85px;
+      margin-top: 4px;
+    }
+    .input_features > input[type="radio"] {
+      margin-right: 48px;
+    }
+    .input_features_comp > label {
+      margin-left: 24px;
+    }
+    .input_features_comp > .radio_tnm {
+      margin-left: 81px;
+      margin-right: -71px;
+    }
+    .input_features_comp > .radio_tnm {
+      margin-left: 81px;
+      margin-right: -71px;
+      width: 125px;
+      height: 30px;
+      border-radius: 10px;
+    }
+    #next_proceed{
+      width:100%;
+    }
+    .input_features_comp .edit_btn_com {
+      margin-left: 53px;
+      margin-right: 6px;
+      margin-top: 4px;
+    }
+    #story {
+      width: 100% !important;
+      border-radius: 10px;
+    }
+    .cm_btn{
+      width: 100%;
+      background-color: #5a9893 !important;
+      border-radius: unset !important;
+      color: #fff !important;
+    }
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { }
+ 
+@media all and (max-width: 480px) {
+  .btnCollection,.btn_cont{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .btn_cont button{
+    width: 100%;
+    margin-bottom: .5rem;
+  }
+  #next_proceed{
+    width: 100%;
+  }
+ }
+ 
   </style>
 </head>
 {% block content %}
 <body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
-<div class="container">
-  <div class="second_con">
-    <div class="content_con">
-    <div class="heading" style="color: aliceblue; margin-top: 40px;">
-      <img src="/static/images/jbt3-logo-png.png" style="width:200px; background-repeat: no-repeat;margin-left: -35px;">
-    </div>
-    <div class="error" style="color: rgb(205, 47, 76);font-weight: 600;">{{message}}</div>
-    <form method="post">
-      {% csrf_token %}
-    <div class="rad_ad" style="color:#f0f2f6;">
-        <div class="brief_overview">
-            <label for="overview">Provide a brief overview of the project</label>
+  <div class="container ">
+    <div class="second_con row ">
+      <div class="content_con col-lg-12 col-md-12 col-12">
+        <div class="heading" style="color: aliceblue; ">
+          <img
+            src="/static/images/jbt3-logo-png.png"
+            style="
+              width: 200px;
+              background-repeat: no-repeat;
+              margin-left: -35px;
+            "
+          />
         </div>
-        <div class="rad_ch2">
-            <textarea id="story" name="story" rows="2" cols="105">Write a brief overview of the project</textarea>
+        <div class="error" style="color: rgb(205, 47, 76); font-weight: 600">
+          {{message}}
         </div>
-        <div class="edit_btn" style="text-align: right;">
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
-        </div>
-        <div class="features">
-            <label for="overview">Provide 5 key features of the project</label>
-        </div>
-        <div class="input_features">
-          <label>Feature 1</label><label>Feature 2</label><label>Feature 3</label><label>Feature 4</label><label>Feature 5</label><br>
-          <input type="text" name="Feature_1" style="width: 150px;border-radius: 10px;"> <input type="text" name="Feature_2" style="width: 150px;border-radius: 10px;"> <input type="text" style="width: 150px;border-radius: 10px;" name="Feature_3"> <input type="text" style="width: 150px;border-radius: 10px;" name="Feature_4"> <input type="text" style="width: 150px;border-radius: 10px;" name="Feature_5"><br>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
-        </div>
+        <form method="post mb-5">
+          {% csrf_token %}
+          <div class="rad_ad" style="color: #f0f2f6">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-12">
+                <div class="brief_overview">
+                  <label for="overview"
+                    >Provide a brief overview of the project</label
+                  >
+                </div>
+                <div class="rad_ch2">
+                  <textarea id="story" name="story" rows="2" style="width: 100%;">
+</textarea
+                  >
+                </div>
+                <div class="edit_btn" style="text-align: right">
+                  <button
+                    style="border: none; color: #378a65; width: 60px"
+                    class="edit_btn"
+                  >
+                    Edit
+                  </button>
+                </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-12">
+                <div class="features">
+                  <label for="overview"
+                    >Provide 5 key features of the project</label
+                  >
+                </div>
+                </div>
+                <div class="col ">
+                  <label>Feature 1</label>
+                  <input
+                    type="text"
+                    name="Feature_1"
+                    style="width: 100%; border-radius: 10px"
+                  />
+                  <div class="d-flex justify-content-end">
 
-        <!-- Next -->
-        <br>
-        <div class="features">
-            <label for="overview">Who are the project main competitors provide 3</label>
-            <label for="proj_del">How will this project be delivered ?</label>
-        </div>
-        <div class="input_features_comp">
-          <label>Competitor 1</label><label>Competitor 2</label><label>Competitor 3</label>
-          <br>
-          <input type="text" style="width: 120px;border-radius: 10px;" name="Competitor_1"> <input type="text" style="width: 120px;border-radius: 10px;" name="Competitor_2"> <input type="text" style="width: 120px;border-radius: 10px;" name="Competitor_3"> 
-          <button class="radio_tnm"> Mobile App<input type="radio" name="app" value="Mobile App" style="width: 20px;border-radius: 10px;"></button> <button class="radio_tnm">Web App<input type="radio" name="app" value="Web_App" style="width: 20px;border-radius: 10px;"></button> <button class="radio_tnm">IOT<input type="radio" name="app" value="IOT" style="width: 20px;border-radius: 10px;"></button><br>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn_com">Edit</button>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn_com">Edit</button>
-          <button style="border: none;color:#378a65;width: 60px;" class="edit_btn_com">Edit</button>
-        </div>
-        
-    </div>
-      <br><br>
-      <div class="btn_cont">
-        <button id="next_proceed" type="submit" class="btn" style="background-color: #378a65; color: #d2ebd5; width: 25%;">Continue
-            <span class="glyphicon glyphicon-menu-down"></span>
-          </button>
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn mt-3 "
+                    >
+                      Edit
+                    </button>
+                  </div>
+                </div>
+                <div class="col ">
+                  <label>Feature 2</label>
+                  <input
+                    type="text"
+                    name="Feature_2"
+                    style="width: 100%; border-radius: 10px"
+                  />
+                  <div class="d-flex justify-content-end">
+
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn mt-3 "
+                    >
+                      Edit
+                    </button>
+                  </div>
+                </div>
+                <div class="col ">
+                  <label>Feature 3</label>
+                  <input
+                    type="text"
+                    style="width: 100%; border-radius: 10px"
+                    name="Feature_3"
+                  />
+                  <div class="d-flex justify-content-end">
+
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn mt-3 "
+                    >
+                      Edit
+                    </button>
+                  </div>
+                </div>
+                <div class="col ">
+                  <label>Feature 4</label>
+                  <input
+                    type="text"
+                    style="width: 100%; border-radius: 10px"
+                    name="Feature_4"
+                  />
+                  <div class="d-flex justify-content-end">
+
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn mt-3 "
+                    >
+                      Edit
+                    </button>
+                  </div>
+                </div>
+                <div class="col ">
+                  <label>Feature 5</label>
+                  <input
+                    type="text"
+                    style="width: 100%; border-radius: 10px"
+                    name="Feature_5"
+                  />
+                  <div class="d-flex justify-content-end">
+
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn mt-3 "
+                    >
+                      Edit
+                    </button>
+                  </div>
+                </div>
+               
+                <!-- Next -->
+      
+                
+                
+              </div>
+              <div class="row my-3">
+                <div class="col-lg-6">
+                  <label for="overview"
+                    >Who are the project main competitors provide 3</label
+                  >
+                  <div class="input_features_comp row">
+                    <div class="col">
+                      <label>Competitor 1</label>
+                      <input
+                      type="text"
+                      style="width: 120px; border-radius: 10px"
+                      name="Competitor_1"
+                    />
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn_com"
+                    >
+                      Edit
+                    </button>
+                    </div>
+                    <div class="col">
+                      <label>Competitor 2</label>
+                      <input
+                      type="text"
+                      style="width: 120px; border-radius: 10px"
+                      name="Competitor_2"
+                    />
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn_com"
+                    >
+                      Edit
+                    </button>
+                    </div>
+                    <div class="col">
+                      <label>Competitor 3</label>
+                      <input
+                      type="text"
+                      style="width: 120px; border-radius: 10px"
+                      name="Competitor_3"
+                    />
+                    <button
+                      style="border: none; color: #378a65; width: 60px"
+                      class="edit_btn_com"
+                    >
+                      Edit
+                    </button>
+                    </div>
+                   
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label for="proj_del"
+                    >How will this project be delivered ?</label
+                  ><br>
+                  <div class="btnCollection mt-4 row">
+                    <div class="col">
+                      <button class="radio_tnm">
+                        <input
+                          type="radio"
+                          name="app"
+                          value="Mobile App"
+                          style="width: 20px; border-radius: 10px"
+                          checked
+                        />Mobile App
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button class="radio_tnm">
+                        <input
+                          type="radio"
+                          name="app"
+                          value="Web_App"
+                          style="width: 20px; border-radius: 10px"
+                        />Web App
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button class="radio_tnm">
+                        <input
+                          type="radio"
+                          name="app"
+                          value="IOT"
+                          style="width: 20px; border-radius: 10px"
+                        />IOT</button
+                      >
+                    </div>
+                    
+  
+                  
+                </div>
+                <div class="btn_cont  mt-3 row">
+                    
+                  <div class="col">
+                    <button
+                    style="border: none; color: #378a65; "
+                    class="clear_all cm_btn px-3"
+                  >
+                    CLEAR ALL
+                  </button>
+                  </div>
+                  <div class="col">
+                    <button
+                    style="border: none; color: #378a65; "
+                    class="save px-3 cm_btn"
+                  >
+                    SAVE
+                  </button>
+                  </div>
+                  <div class="col">
+                    <button
+                    id="next_proceed"
+                    type="submit"
+                    class="btn "
+                    style=" color: #d2ebd5;  border-radius: 25px; border-top:none; border-bottom: none;background-color: #52aa9a; /* For browsers that do not support gradients */
+                    background-image: linear-gradient(#32685e,#52aa9a );"
+                  >
+                    SUBMIT
+                    <span class="glyphicon glyphicon-menu-down"></span>
+                  </button>
+                  </div>
+                  
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br /><br />
+          
+        </form>
       </div>
-     </form>
-  </div>
-</div>
-</div>   
+    </div>
+  </div>  
 <script>
 $(document).ready(function() {
 $(".card").click(function () {
