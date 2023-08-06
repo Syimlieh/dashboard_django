@@ -13,6 +13,7 @@
     /* body{
       height: 100vh;
     } */
+   
          .mb-4,
       .my-4 {
         text-align: left;
@@ -52,6 +53,50 @@
         margin-bottom: 70px !important;
         /* background-color: #6f9893; */
       }
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .custm-bg button{
+padding: 8px 15px ;
+  }
+  .log-head{
+    margin-bottom: 10px !important;
+
+  }.login-heading{
+      font-size: 20px !important;
+    }
+    .card {
+        margin-top: 2px !important;
+        margin-bottom: 10px !important;
+ }
+ .card-border-size{
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+ }
+}
+ 
+@media all and (max-width: 480px) {
+  .custm-bg button{
+padding: 8px 13px !important;
+  }
+  .log-head{
+margin-bottom: 10px !important;
+  }
+  .login-heading{
+      font-size: 20px !important;
+    }
+    .card {
+        margin-top: 2px !important;
+        margin-bottom: 10px !important;
+ }
+ .card-border-size{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+ }
+}
+
   </style>
 </head>
 <body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
@@ -60,12 +105,12 @@
         <section class="">
           <!-- Jumbotron -->
           <div
-            class="px-4 py-5 px-md-5 text-center text-lg-start"
+            class="px-4 py-5 px-md-5 text-center text-lg-start card-border-size"
             style="color: #f3f4f6"
           >
             <div class="container">
               <div class="row gx-lg-5 align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="col-lg-6 mb-5 mb-lg-0 log-head ">
                   <img
                     src="/static/images/jbt3-logo-png.png"
                     style="
@@ -75,7 +120,7 @@
                       margin-top: -225px;
                     "
                   />
-                  <h6 class="my-4 display-4 fw-bold">
+                  <h6 class="my-4 display-4 fw-bold login-heading">
                     Innovation & <br />
                     <span
                       >Grant Eligibility<br />
@@ -262,7 +307,7 @@
                       <!--  -->
   
                       <div class="text-center mt-5">
-                        <p>Been here before? <a href="/">Login</a></p>
+                        <p>Been here before? <a class ="text-white" href="/">Login</a></p>
                       </div>
                       <!-- </form> -->
                     </div>
