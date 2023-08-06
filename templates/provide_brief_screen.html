@@ -144,258 +144,73 @@ background-color: transparent !important;  */
         <div class="error" style="color: rgb(205, 47, 76); font-weight: 600">
           {{message}}
         </div>
-        <form method="post mb-5">
+        <form method="post">
           {% csrf_token %}
-          <div class="rad_ad" style="color: #f0f2f6">
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-12">
-                <div class="brief_overview">
-                  <label for="overview"
-                    >Provide a brief overview of the project</label
-                  >
-                </div>
-                <div class="rad_ch2">
-                  <textarea id="story" name="story" rows="2" style="width: 100%;">
-</textarea
-                  >
-                </div>
-                <div class="edit_btn" style="text-align: right">
-                  <button
-                    style="border: none; color: #378a65; width: 60px"
-                    class="edit_btn"
-                  >
-                    Edit
-                  </button>
-                </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-12">
-                <div class="features">
-                  <label for="overview"
-                    >Provide 5 key features of the project</label
-                  >
-                </div>
-                </div>
-                <div class="col ">
-                  <label>Feature 1</label>
-                  <input
-                    type="text"
-                    name="Feature_1"
-                    style="width: 100%; border-radius: 10px"
-                  />
-                  <div class="d-flex justify-content-end">
-
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn mt-3 "
-                    >
-                      Edit
-                    </button>
-                  </div>
-                </div>
-                <div class="col ">
-                  <label>Feature 2</label>
-                  <input
-                    type="text"
-                    name="Feature_2"
-                    style="width: 100%; border-radius: 10px"
-                  />
-                  <div class="d-flex justify-content-end">
-
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn mt-3 "
-                    >
-                      Edit
-                    </button>
-                  </div>
-                </div>
-                <div class="col ">
-                  <label>Feature 3</label>
-                  <input
-                    type="text"
-                    style="width: 100%; border-radius: 10px"
-                    name="Feature_3"
-                  />
-                  <div class="d-flex justify-content-end">
-
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn mt-3 "
-                    >
-                      Edit
-                    </button>
-                  </div>
-                </div>
-                <div class="col ">
-                  <label>Feature 4</label>
-                  <input
-                    type="text"
-                    style="width: 100%; border-radius: 10px"
-                    name="Feature_4"
-                  />
-                  <div class="d-flex justify-content-end">
-
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn mt-3 "
-                    >
-                      Edit
-                    </button>
-                  </div>
-                </div>
-                <div class="col ">
-                  <label>Feature 5</label>
-                  <input
-                    type="text"
-                    style="width: 100%; border-radius: 10px"
-                    name="Feature_5"
-                  />
-                  <div class="d-flex justify-content-end">
-
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn mt-3 "
-                    >
-                      Edit
-                    </button>
-                  </div>
-                </div>
-               
-                <!-- Next -->
-      
-                
-                
-              </div>
-              <div class="row my-3">
-                <div class="col-lg-6">
-                  <label for="overview"
-                    >Who are the project main competitors provide 3</label
-                  >
-                  <div class="input_features_comp row">
-                    <div class="col">
-                      <label>Competitor 1</label>
-                      <input
-                      type="text"
-                      style="width: 120px; border-radius: 10px"
-                      name="Competitor_1"
-                    />
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn_com"
-                    >
-                      Edit
-                    </button>
-                    </div>
-                    <div class="col">
-                      <label>Competitor 2</label>
-                      <input
-                      type="text"
-                      style="width: 120px; border-radius: 10px"
-                      name="Competitor_2"
-                    />
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn_com"
-                    >
-                      Edit
-                    </button>
-                    </div>
-                    <div class="col">
-                      <label>Competitor 3</label>
-                      <input
-                      type="text"
-                      style="width: 120px; border-radius: 10px"
-                      name="Competitor_3"
-                    />
-                    <button
-                      style="border: none; color: #378a65; width: 60px"
-                      class="edit_btn_com"
-                    >
-                      Edit
-                    </button>
-                    </div>
-                   
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <label for="proj_del"
-                    >How will this project be delivered ?</label
-                  ><br>
-                  <div class="btnCollection mt-4 row">
-                    <div class="col">
-                      <button class="radio_tnm">
-                        <input
-                          type="radio"
-                          name="app"
-                          value="Mobile App"
-                          style="width: 20px; border-radius: 10px"
-                          checked
-                        />Mobile App
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button class="radio_tnm">
-                        <input
-                          type="radio"
-                          name="app"
-                          value="Web_App"
-                          style="width: 20px; border-radius: 10px"
-                        />Web App
-                      </button>
-                    </div>
-                    <div class="col">
-                      <button class="radio_tnm">
-                        <input
-                          type="radio"
-                          name="app"
-                          value="IOT"
-                          style="width: 20px; border-radius: 10px"
-                        />IOT</button
-                      >
-                    </div>
-                    
-  
-                  
-                </div>
-                <div class="btn_cont  mt-3 row">
-                    
-                  <div class="col">
-                    <button
-                    style="border: none; color: #378a65; "
-                    class="clear_all cm_btn px-3"
-                  >
-                    CLEAR ALL
-                  </button>
-                  </div>
-                  <div class="col">
-                    <button
-                    style="border: none; color: #378a65; "
-                    class="save px-3 cm_btn"
-                  >
-                    SAVE
-                  </button>
-                  </div>
-                  <div class="col">
-                    <button
-                    id="next_proceed"
-                    type="submit"
-                    class="btn "
-                    style=" color: #d2ebd5;  border-radius: 25px; border-top:none; border-bottom: none;background-color: #52aa9a; /* For browsers that do not support gradients */
-                    background-image: linear-gradient(#32685e,#52aa9a );"
-                  >
-                    SUBMIT
-                    <span class="glyphicon glyphicon-menu-down"></span>
-                  </button>
-                  </div>
-                  
-                </div>
-                </div>
-              </div>
+        <div class="rad_ad" style="color:#f0f2f6;">
+            <div class="brief_overview">
+                <label for="overview">Provide a brief overview of the project</label>
+            </div>
+            <div class="rad_ch2">
+                <textarea id="story" name="story" rows="2" cols="105">Write a brief overview of the project</textarea>
+            </div>
+            <div class="edit_btn" style="text-align: right;">
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
+            </div>
+            <div class="features">
+                <label for="overview">Provide 5 key features of the project</label>
+            </div>
+            <div class="input_features">
+              <label>Feature 1</label><label>Feature 2</label><label>Feature 3</label><label>Feature 4</label><label>Feature 5</label><br>
+              <input type="text" name="Feature_1" style="width: 150px;border-radius: 10px;"> <input type="text" name="Feature_2" style="width: 150px;border-radius: 10px;"> <input type="text" style="width: 150px;border-radius: 10px;" name="Feature_3"> <input type="text" style="width: 150px;border-radius: 10px;" name="Feature_4"> <input type="text" style="width: 150px;border-radius: 10px;" name="Feature_5"><br>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn">Edit</button>
+            </div>
+    
+            <!-- Next -->
+            <br>
+            <div class="features">
+                <label for="overview">Who are the project main competitors provide 3</label>
+                <label for="proj_del">How will this project be delivered ?</label>
+            </div>
+            <div class="input_features_comp">
+              <label>Competitor 1</label><label>Competitor 2</label><label>Competitor 3</label>
+              <br>
+              <input type="text" style="width: 120px;border-radius: 10px;" name="Competitor_1"> <input type="text" style="width: 120px;border-radius: 10px;" name="Competitor_2"> <input type="text" style="width: 120px;border-radius: 10px;" name="Competitor_3"> 
+              <button class="radio_tnm"> Mobile App<input type="radio" name="app" value="Mobile App" style="width: 20px;border-radius: 10px;"></button> <button class="radio_tnm">Web App<input type="radio" name="app" value="Web_App" style="width: 20px;border-radius: 10px;"></button> <button class="radio_tnm">IOT<input type="radio" name="app" value="IOT" style="width: 20px;border-radius: 10px;"></button><br>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn_com">Edit</button>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn_com">Edit</button>
+              <button style="border: none;color:#378a65;width: 60px;" class="edit_btn_com">Edit</button>
+            </div>
+            
+        </div>
+          <br><br>
+          <div class=" row">
+            <div class="col">
+              <button
+              style="border: none; color: #378a65; "
+              class="clear_all cm_btn px-3"
+            >
+              CLEAR ALL
+            </button>
+            </div>
+            <div class="col">
+              <button
+              style="border: none; color: #378a65; "
+              class="save px-3 cm_btn"
+            >
+              SAVE
+            </button>
+            </div>
+            <div class="col btn_cont">
+              <button id="next_proceed" type="submit" class="btn" style="background-color: #378a65; color: #d2ebd5; width: 25%;">Continue
+                  <span class="glyphicon glyphicon-menu-down"></span>
+                </button>
             </div>
           </div>
-          <br /><br />
-          
-        </form>
+         </form>
       </div>
     </div>
   </div>  
