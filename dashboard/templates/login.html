@@ -10,113 +10,267 @@
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    .mb-4, .my-4{text-align: left;margin-bottom: 10px !important;}
-    label {margin-bottom: 5px;}
-    .form-control{background-color: #f3f4f6 !important;
-        border-radius: 1.5rem !important;
+    .mb-4,
+    .my-4 {
+      text-align: left;
+      margin-bottom: 10px !important;
+    }
+    label {
+      margin-bottom: 5px;
+    }
+    .form-control {
+      background-color: #f3f4f6 !important;
+      border-radius: 1.5rem !important;
     }
     .errorlist {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-}
-.card {
-    margin-top: 70px;
-    background-color: #719892;
-    color: aliceblue;
-}
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+    .custm-bg button {
+      background-color: #e6e6e6 !important;
+      padding: 0.5rem 1.5rem !important;
+      border-radius: 25px;
+    }
+    .custm-bg button svg {
+      height: 20px;
+      width: auto;
+      display: flex;
+    }
+    .loginRegister {
+      border-radius: 1rem !important;
+    }
+    .card {
+      margin-top: 70px;
+      /* background-color: #719892; */
+      color: aliceblue;
+    }
+    .textEnd{
+        text-align: end;
+    }
   </style>
 </head>
-<body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100%;">
+<body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
     <div class="container">
         <!-- Section: Design Block -->
-            <section class="">
-                <!-- Jumbotron -->
-                <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="color: #f3f4f6   ;">
-                <div class="container">
-                    <div class="row gx-lg-5 align-items-center">
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-                        <img src="/static/images/jbt3-logo-png.png" style="width:200px; background-repeat: no-repeat;margin-right: 300px;margin-top: -100px;">
-                        <h6 class="my-4 display-4 fw-bold">
-                        Innovation & <br />
-                        <span>Grant Eligibility<br> Review Application</span>
-                        </h6>
-                        
-                    </div>
-            
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-                        <div class="card">
-                        <div class="card-body py-5 px-md-5" style="font-weight: 600;">
-                            <h4>Login</h4>
-                            <br>
-                            <!-- Register buttons -->
-                            <div class="text-center">
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                <i class="fab fa-facebook-f"></i>
-                                </button>
-            
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                <i class="fab fa-google"></i>
-                                </button>
-            
-                                <a href="#" class="btn btn-link btn-floating mx-1">
-                                <i class="fab fa-twitter"></i>
-                                </a>
-            
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                <i class="fab fa-github"></i>
-                                </button>
-                            </div>
-                            <br>
-                            <!-- <form>
-                         
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example1">Full name</label>
-                                <input type="text" id="form3Example1" placeholder="John Doe" class="form-control" />
-                            </div>
-                                
-                          
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example3">Email address</label>
-                                <input type="email" id="form3Example3" placeholder="example@gmail.com" class="form-control" />
-                            </div>
-            
-                          
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example4">Password</label>
-                                <input type="password" id="form3Example4" placeholder="Enter at least 8+ characters" class="form-control" />
-                            </div>
-                            <br>
-
-                            <button style="text-align:center; background-color: #1dbed6;color: aliceblue;" type="submit" class="btn btn-block mb-4">
-                                Sign up
-                            </button> -->
-
-                            <!--  -->
-                            <form role="form" method="post" action="{% url 'login' %}" style="text-align: left;">
-                                
-                                {% csrf_token %}
-                                {{ form }}
-                                    <button style="text-align:center; margin-top: 20px; border-radius: 30px; background-color: #398376;color: aliceblue;" type="submit" class="btn btn-block mb-4">LOGIN</button>
-                                
-                            </form>
-
-                            <!--  -->
-            
-                            <div class="text-center">
-                                <p>Been here before? <a href="/register">Sign up</a></p>
-                            </div>
-                            <!-- </form> -->
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+        <section class="">
+          <!-- Jumbotron -->
+          <div
+            class="px-4 py-5 px-md-5 text-center text-lg-start"
+            style="color: #f3f4f6"
+          >
+            <div class="container">
+              <div class="row gx-lg-5 align-items-center">
+                <div class="col-lg-6 mb-lg-5 mb-md-3 mb-0 mb-lg-0">
+                  <img
+                    src="/static/images/jbt3-logo-png.png"
+                    style="
+                      width: 200px;
+                      background-repeat: no-repeat;
+                      margin-right: 300px;
+                      margin-top: -100px;
+                    "
+                  />
+                  <h6 class="my-4 display-4 fw-bold">
+                    Innovation & <br />
+                    <span
+                      >Grant Eligibility<br />
+                      Review Application</span
+                    >
+                  </h6>
                 </div>
-                </div>
-                <!-- Jumbotron -->
-            </section>
-            <!-- Section: Design Block -->
   
-    </div>
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                  <div
+                    class="card loginRegister"
+                    style="background-color: rgba(90, 152, 147, 0.75) !important"
+                  >
+                    <div class="card-body py-5 px-md-5" style="font-weight: 600">
+                      <h4>Login</h4>
+                      <br />
+                      <!-- Register buttons -->
+  
+                      <br />
+                      <!-- <form>
+                           
+                              <div class="form-outline mb-4">
+                                  <label class="form-label" for="form3Example1">Full name</label>
+                                  <input type="text" id="form3Example1" placeholder="John Doe" class="form-control" />
+                              </div>
+                                  
+                            
+                              <div class="form-outline mb-4">
+                                  <label class="form-label" for="form3Example3">Email address</label>
+                                  <input type="email" id="form3Example3" placeholder="example@gmail.com" class="form-control" />
+                              </div>
+              
+                            
+                              <div class="form-outline mb-4">
+                                  <label class="form-label" for="form3Example4">Password</label>
+                                  <input type="password" id="form3Example4" placeholder="Enter at least 8+ characters" class="form-control" />
+                              </div>
+                              <br>
+  
+                              <button style="text-align:center; background-color: #1dbed6;color: aliceblue;" type="submit" class="btn btn-block mb-4">
+                                  Sign up
+                              </button> -->
+  
+                      <!--  -->
+                      <form
+                        role="form"
+                        method="post"
+                        action="{% url 'login' %}"
+                        style="text-align: left"
+                      >
+                        {% csrf_token %} {{ form }}
+                        <div class="row mt-2 align-items-center">
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                      Remember Me
+                                    </label>
+                                    <!-- <div class="invalid-feedback">
+                                      You must agree before submitting.
+                                    </div> -->
+                                  </div>    
+                            </div>
+                            <div class="col-md-6 textEnd">
+                                <label for="">Forget Password?</label>
+                            </div>
+                        </div>
+                        <button
+                          style="
+                            text-align: center;
+                            margin-top: 20px;
+                            border-radius: 30px;
+                            /* background-color: #52aa9a; */
+                            background-color: #52aa9a; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#52aa9a, #32685e);
+                            color: aliceblue;
+                            border-top:none;
+                            border-bottom: none;
+                          "
+                          type="submit"
+                          class="btn btn-block mb-4"
+                        >
+                          LOGIN
+                        </button>
+                      </form>
+  
+                      <!--  -->
+  
+                      <div class="text-center mt-5">
+                        <p>Been here before? <a href="/register">Sign up</a></p>
+                        Or Sign Up Using
+                      </div>
+                      <div class="text-center custm-bg mt-3">
+                        <button
+                          type="button"
+                          class="btn btn-link btn-floating mx-1"
+                        >
+                          <!-- <i class="fab fa-google"></i> -->
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 326667 333333"
+                            shape-rendering="geometricPrecision"
+                            text-rendering="geometricPrecision"
+                            image-rendering="optimizeQuality"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          >
+                            <path
+                              d="M326667 170370c0-13704-1112-23704-3518-34074H166667v61851h91851c-1851 15371-11851 38519-34074 54074l-311 2071 49476 38329 3428 342c31481-29074 49630-71852 49630-122593m0 0z"
+                              fill="#4285f4"
+                            />
+                            <path
+                              d="M166667 333333c44999 0 82776-14815 110370-40370l-52593-40742c-14074 9815-32963 16667-57777 16667-44074 0-81481-29073-94816-69258l-1954 166-51447 39815-673 1870c27407 54444 83704 91852 148890 91852z"
+                              fill="#34a853"
+                            />
+                            <path
+                              d="M71851 199630c-3518-10370-5555-21482-5555-32963 0-11482 2036-22593 5370-32963l-93-2209-52091-40455-1704 811C6482 114444 1 139814 1 166666s6482 52221 17777 74814l54074-41851m0 0z"
+                              fill="#fbbc04"
+                            />
+                            <path
+                              d="M166667 64444c31296 0 52406 13519 64444 24816l47037-45926C249260 16482 211666 1 166667 1 101481 1 45185 37408 17777 91852l53889 41853c13520-40185 50927-69260 95001-69260m0 0z"
+                              fill="#ea4335"
+                            />
+                          </svg>
+                        </button>
+  
+                        <button
+                        type="button"
+                        class="btn btn-link btn-floating mx-1"
+                      >
+                        <!-- <i class="fab fa-facebook-f"></i> -->
+                        <svg
+                          id="Layer_1"
+                          data-name="Layer 1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 506.86 506.86"
+                        >
+                          <defs>
+                            <style>
+                              .cls-1 {
+                                fill: #1877f2;
+                              }
+                              .cls-2 {
+                                fill: #fff;
+                              }
+                            </style>
+                          </defs>
+                          <title>facebook-round-color</title>
+                          <path
+                            class="cls-1"
+                            d="M506.86,253.43C506.86,113.46,393.39,0,253.43,0S0,113.46,0,253.43C0,379.92,92.68,484.77,213.83,503.78V326.69H149.48V253.43h64.35V197.6c0-63.52,37.84-98.6,95.72-98.6,27.73,0,56.73,5,56.73,5v62.36H334.33c-31.49,0-41.3,19.54-41.3,39.58v47.54h70.28l-11.23,73.26H293V503.78C414.18,484.77,506.86,379.92,506.86,253.43Z"
+                          />
+                          <path
+                            class="cls-2"
+                            d="M352.08,326.69l11.23-73.26H293V205.89c0-20,9.81-39.58,41.3-39.58h31.95V104s-29-5-56.73-5c-57.88,0-95.72,35.08-95.72,98.6v55.83H149.48v73.26h64.35V503.78a256.11,256.11,0,0,0,79.2,0V326.69Z"
+                          />
+                        </svg>
+                          </button>
+  
+                        <!-- <a href="#" class="btn btn-link btn-floating mx-1">
+                                  <i class="fab fa-twitter"></i>
+                                  </a> -->
+  
+                                  <button
+                                  type="button"
+                                  class="btn btn-link btn-floating mx-1"
+                                >
+                                  <!-- <i class="fab fa-github"></i> -->
+                                  <!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="64"
+                                    height="64"
+                                    shape-rendering="geometricPrecision"
+                                    text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    viewBox="0 0 640 640"
+                                  >
+                                    <path
+                                    fill="#ffffff" 
+                                    stroke="#000000"
+                                    stroke-width="2"
+                                      d="M494.782 340.02c-.803-81.025 66.084-119.907 69.072-121.832-37.595-54.993-96.167-62.552-117.037-63.402-49.843-5.032-97.242 29.362-122.565 29.362-25.253 0-64.277-28.607-105.604-27.85-54.32.803-104.4 31.594-132.403 80.245C29.81 334.457 71.81 479.58 126.816 558.976c26.87 38.882 58.914 82.56 100.997 81 40.512-1.594 55.843-26.244 104.848-26.244 48.993 0 62.753 26.245 105.64 25.406 43.606-.803 71.232-39.638 97.925-78.65 30.887-45.12 43.548-88.75 44.316-90.994-.969-.437-85.029-32.634-85.879-129.439l.118-.035zM414.23 102.178C436.553 75.095 451.636 37.5 447.514-.024c-32.162 1.311-71.163 21.437-94.253 48.485-20.729 24.012-38.836 62.28-33.993 99.036 35.918 2.8 72.591-18.248 94.926-45.272l.036-.047z"
+                                    />
+                                  </svg>
+                                </button>
+                      </div>
+                      <!-- </form> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Jumbotron -->
+        </section>
+        <!-- Section: Design Block -->
+      </div>
 </body>
 </html>

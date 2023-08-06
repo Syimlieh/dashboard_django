@@ -26,11 +26,56 @@
     height: 600px;
     border-radius: 20px;
 }
+#id_what_do_want{
+  list-style-type: none;
+  padding: 0;
+}
+#id_what_do_want li label{
+  display: flex;
+  align-items: center;
+}
+#id_what_do_want li label input{
+  margin-right: .5rem !important;
+}
 /* .content_con {
     width: 700px;
     margin-left: 100px;
 } */
+input[type='radio']{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  background: none !important;
+  background-color: transparent !important; 
+  outline: none; /* Remove outline on focus */
+  margin: 0; /* Remove default margin */
+  border: 2px solid white; /* Add a white border for the outline */
+  border-radius: 50%;
+  position: relative; /* Add relative position */
+}
+
+input[type="radio"]:checked:before {
+  content: "";
+  position: absolute; /* Position the filled part absolutely */
+  top: 3px; /* Adjust the vertical position */
+  left: 3px; /* Adjust the horizontal position */
+  width: 10px; /* Adjust the size */
+  margin: auto;
+  text-align: center;
+  height: 10px; /* Adjust the size */
+  border-radius: 50%;
+  background-color: #fff; /* Set the color for checked radio button */
+  
+}
+
 .active {background-color:#d2ebd5;}
+
   </style>
 </head>
 {% block content %}
@@ -56,8 +101,11 @@
     </div>
       <br><br>
       <div class="btn_cont">
-        <button id="next_proceed" type="submit" class="btn" style="background-color: #378a65; color: #d2ebd5; width: 25%;">Continue
+        <button id="next_proceed" type="submit" class="btn" style=" color: #d2ebd5; width: 15%; border-radius: 25px; border-top:none; border-bottom: none;background-color: #52aa9a; /* For browsers that do not support gradients */
+        background-image: linear-gradient(#32685e,#52aa9a );display: flex;align-items: center;justify-content: space-between;">Continue
             <span class="glyphicon glyphicon-menu-down"></span>
+            <svg xmlns="http://www.w3.org/2000/svg"  width="35px"
+            height="20px" viewBox="0 0 24 24"><title>Artboard-9</title><g id="Right-3" data-name="Right"><path  d="M21.707,11.293l-7-7A1,1,0,0,0,13,5V8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H13v3a1,1,0,0,0,1.707.707l7-7A1,1,0,0,0,21.707,11.293Z" style="fill:#ffffff"/></g></svg>
           </button>
       </div>
      </form>
