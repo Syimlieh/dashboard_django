@@ -21,8 +21,9 @@
     padding: 1.5rem;
   }
     .second_con{
-    width: 900px;
-    margin-left: 100px;
+    width: 100%;
+    /* margin-left: 100px; */
+    margin: auto;
     height: 600px;
     border-radius: 20px;
 }
@@ -37,6 +38,8 @@
 #id_what_do_want li label input{
   margin-right: .5rem !important;
 }
+#next_proceed
+{width: 15%;}
 /* .content_con {
     width: 700px;
     margin-left: 100px;
@@ -76,6 +79,20 @@ input[type="radio"]:checked:before {
 
 .active {background-color:#d2ebd5;}
 
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { }
+ 
+@media all and (max-width: 480px) { 
+
+  #next_proceed
+  {
+    width: 100%;
+  }
+}
+
   </style>
 </head>
 {% block content %}
@@ -101,7 +118,7 @@ input[type="radio"]:checked:before {
     </div>
       <br><br>
       <div class="btn_cont">
-        <button id="next_proceed" type="submit" class="btn" style=" color: #d2ebd5; width: 15%; border-radius: 25px; border-top:none; border-bottom: none;background-color: #52aa9a; /* For browsers that do not support gradients */
+        <button id="next_proceed" type="submit" class="btn" style=" color: #d2ebd5;  border-radius: 25px; border-top:none; border-bottom: none;background-color: #52aa9a; /* For browsers that do not support gradients */
         background-image: linear-gradient(#32685e,#52aa9a );display: flex;align-items: center;justify-content: space-between;">Continue
             <span class="glyphicon glyphicon-menu-down"></span>
             <svg xmlns="http://www.w3.org/2000/svg"  width="35px"
