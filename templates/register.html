@@ -41,6 +41,10 @@
         width: auto;
         display: flex;
       }
+      .logo{
+      margin-right:300px;
+      margin-top: -225px;
+    }
       .formButton button {
         border-radius: 25px;
       }
@@ -64,28 +68,53 @@ padding: 8px 15px ;
   .log-head{
     margin-bottom: 10px !important;
 
-  }.login-heading{
-      font-size: 20px !important;
+  }
+  .form-check-label{
+    font-size: 14px;
+  }
+  .login-heading{
+      font-size: 2.5rem !important;
     }
     .card {
         margin-top: 2px !important;
         margin-bottom: 10px !important;
  }
+ .loginSmall{
+    font-size: 14px;
+    font-weight: 400 !important;
+ }
  .card-border-size{
   padding-left: 25px !important;
   padding-right: 25px !important;
- }
+  padding-bottom: 6rem !important;
+}
+ .logo{
+      margin-right:0px !important;
+      margin-top: 0;
+    }
+    .form-check-label{
+    font-size: 14px;
+    font-weight: 400 !important;
+  }
 }
  
 @media all and (max-width: 480px) {
   .custm-bg button{
 padding: 8px 13px !important;
   }
-  .log-head{
-margin-bottom: 10px !important;
+  .form-check-label{
+    font-size: 14px;
+    font-weight: 400 !important;
   }
-  .login-heading{
-      font-size: 20px !important;
+  .logo{
+      margin-right:0px !important;
+      margin-top: 0;
+    }
+  /* .log-head{
+margin-bottom: 10px !important;
+  } */
+    .login-heading{
+      font-size: 2.5rem !important;
     }
     .card {
         margin-top: 2px !important;
@@ -94,7 +123,13 @@ margin-bottom: 10px !important;
  .card-border-size{
   padding-left: 15px !important;
   padding-right: 15px !important;
+  padding-bottom: 6rem !important;
  }
+ .loginSmall{
+    font-size: 14px;
+    font-weight: 400 !important;
+ }
+
 }
 
   </style>
@@ -110,14 +145,16 @@ margin-bottom: 10px !important;
           >
             <div class="container">
               <div class="row gx-lg-5 align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0 log-head ">
+                <div class="col-lg-6 mb-5 mb-lg-0  ">
                   <img
+                  class="logo"
                     src="/static/images/jbt3-logo-png.png"
                     style="
-                      width: 200px;
-                      background-repeat: no-repeat;
-                      margin-right: 300px;
-                      margin-top: -225px;
+                      height: 200px;
+                      width: auto;
+                      /* background-repeat: no-repeat; */
+                      /* margin-right: 300px;
+                      margin-top: -225px; */
                     "
                   />
                   <h6 class="my-4 display-4 fw-bold login-heading">
@@ -306,7 +343,7 @@ margin-bottom: 10px !important;
   
                       <!--  -->
   
-                      <div class="text-center mt-5">
+                      <div class="text-center loginSmall mt-5">
                         <p>Been here before? <a class ="text-white" href="/">Login</a></p>
                       </div>
                       <!-- </form> -->

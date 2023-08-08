@@ -32,6 +32,9 @@
       padding: .3rem;
 
     }
+    .input_features_comp input{
+      width: 120px;
+    }
     .btnCollection button{
       margin-right: 1rem;
       background-color: #fff;
@@ -103,11 +106,20 @@ background-color: transparent !important;  */
       border-radius: unset !important;
       color: #fff !important;
     }
-@media all and (min-width: 1024px) and (max-width: 1280px) { }
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+
+ }
  
-@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 768px) and (max-width: 1025px) { 
+
+}
  
-@media all and (min-width: 480px) and (max-width: 768px) { }
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .marginBottom
+    {
+      margin-bottom: 1rem;
+    }
+ }
  
 @media all and (max-width: 480px) {
   .btnCollection,.btn_cont{
@@ -122,6 +134,37 @@ background-color: transparent !important;  */
   #next_proceed{
     width: 100%;
   }
+  .input_features_comp{
+    display: block;
+  }
+  .input_features_comp label{
+    width: 100%;
+  }
+  .input_features_comp input{
+    width: 100%;
+  }
+  .input_features_comp .col{
+    margin-bottom: .8rem;
+    
+  }
+  .input_features_comp .edit_btn_com{
+    margin-left: auto !important;
+    margin-right: unset;
+  }
+  .rad_ad .col{
+    width: 100%;
+    margin-bottom: .8rem;
+  }
+  .btnCollection{
+    display: block;
+  }
+  .btn_cont{
+    display: block;
+  }
+  .marginBottom{
+    margin-bottom: 1rem;
+  }
+
  }
  
   </style>
@@ -267,7 +310,7 @@ background-color: transparent !important;  */
                 
               </div>
               <div class="row my-3">
-                <div class="col-lg-6">
+                <div class="col-lg-6 marginBottom">
                   <label for="overview"
                     >Who are the project main competitors provide 3</label
                   >
@@ -276,7 +319,7 @@ background-color: transparent !important;  */
                       <label>Competitor 1</label>
                       <input
                       type="text"
-                      style="width: 120px; border-radius: 10px"
+                      style="border-radius: 10px"
                       name="Competitor_1"
                     />
                     <button
@@ -290,7 +333,7 @@ background-color: transparent !important;  */
                       <label>Competitor 2</label>
                       <input
                       type="text"
-                      style="width: 120px; border-radius: 10px"
+                      style="border-radius: 10px"
                       name="Competitor_2"
                     />
                     <button
@@ -304,7 +347,7 @@ background-color: transparent !important;  */
                       <label>Competitor 3</label>
                       <input
                       type="text"
-                      style="width: 120px; border-radius: 10px"
+                      style="border-radius: 10px"
                       name="Competitor_3"
                     />
                     <button

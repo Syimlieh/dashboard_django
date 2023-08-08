@@ -38,6 +38,12 @@
 .second_tab b{
     padding-bottom: .8rem ;
 }
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
 .small_tb{
     text-align: center;
     border: 1px solid #000;
@@ -112,6 +118,14 @@ input:checked + .switch:active::before {
 .tab-switch {
   display: none;
 }
+.desc img{
+    height: 200px;
+    width: auto;
+    /* object-fit: contain; */
+}
+.desc h2{
+    margin-top: -135px;
+}
 .tab-label {
   /* position: relative; */
   display: block;
@@ -177,9 +191,30 @@ input:checked + .switch:active::before {
  text-align: center;   
  border: 1px solid #1abc9c;
 }
-@media all and (min-width: 1024px) and (max-width: 1280px) { }
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    /* .content_con .row{
+    flex-direction: column !important;
+  } */
+ }
  
-@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    /* .content_con .row{
+        flex-direction: column !important;
+    } */
+    /* .content_con .row .col-lg-9{
+        max-width: 100%;
+    } */
+    .oneZeroTwoFour{
+        max-width: 100%;
+        flex: unset !important;
+    }
+    .oneZeroTwoFour .tabs .tab{
+        width: 50% ;
+    }
+    .oneZeroTwoFour .tabs .tab .tab-content{
+        width: 100% ;
+    }
+ }
  
 @media all and (min-width: 480px) and (max-width: 768px) {
 .tabs .tab{
@@ -190,7 +225,7 @@ input:checked + .switch:active::before {
     
 }
 .table-borderless {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
 }
 .tabscols>.col {
@@ -208,7 +243,7 @@ input:checked + .switch:active::before {
     width:50%;
 }
 .table-borderless {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
 }
 .tabscols{
@@ -220,10 +255,19 @@ input:checked + .switch:active::before {
 }
 .tab .tab-content{
     width: 100%;
+    height: unset;
 }
 .tabs{
     margin-bottom: 8rem ;
     margin-top: 1rem;
+}
+.desc img{
+    height: 200px;
+    width: auto;
+    /* object-fit: contain; */
+}
+.desc h2{
+    margin-top: unset;
 }
  }
 
@@ -238,13 +282,13 @@ input:checked + .switch:active::before {
         <div class="content_con">
 
     <div class="row" >
-        <div class="col-md-12 col-12 col-lg-9" style="padding-top:60px; ">
+        <div class="col-md-12 col-12 col-lg-9 " style="padding-top:60px; ">
             <div class="desc" >
-                <img src="/static/images/jbt3-logo-png.png" style="width:200px";>
-                <h2 style="text-align: right; margin-top: -135px;">JBT3 - PRE Qualification</h2>
+                <img src="/static/images/jbt3-logo-png.png">
+                <h2 style="text-align: right; ">JBT3 - PRE Qualification</h2>
                 <p style="text-align: right; font-size: 15px;">Submitted Monday, May 22, 2023 at 03:55PM PDT</p>
             </div>
-            <div class="titleTab">
+            <div class="titleTab table-responsive">
                 <table class="table table-borderless" style="background-color: #419283; color: #fff;">
                     <thead>
                     <tr>
@@ -348,7 +392,7 @@ input:checked + .switch:active::before {
             </div>
         </div>
 
-        <div class="col-md-12 col-12 col-lg-3">
+        <div class="col-md-12 col-12 col-lg-3 oneZeroTwoFour">
             <div class="wrapper">
             <div class="tabs">
                 <div class="tab">

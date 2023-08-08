@@ -22,6 +22,10 @@
       background-color: #f3f4f6 !important;
       border-radius: 1.5rem !important;
     }
+    .logo{
+      margin-right:300px;
+      margin-top: -225px;
+    }
     .errorlist {
       color: #721c24;
       background-color: #f8d7da;
@@ -31,6 +35,13 @@
       background-color: #e6e6e6 !important;
       padding: 0.5rem 1.5rem !important;
       border-radius: 25px;
+    }
+    .signUpSmall{
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .signUpSmall p{
+      font-size: 14px;
     }
     .custm-bg button svg {
       height: 20px;
@@ -48,6 +59,40 @@
     .textEnd{
         text-align: end;
     }
+    @media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .login-heading {
+    font-size: 2.5rem !important;
+}
+
+}
+@media all and (max-width: 480px) {
+  .logo{
+      margin-right:0px !important;
+      margin-top: 0px;
+    }
+    .inno{
+      font-size: 25px;
+    }
+    .custm-bg button{
+      padding: 8px 12px !important;
+    }
+    .textEnd{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .form-check label{
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .login-heading {
+    font-size: 2.5rem !important;
+}
+}
   </style>
 </head>
 <body style="background-image: url(/static/images/background-version-1-Grant-review-web-screen.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
@@ -63,15 +108,17 @@
               <div class="row gx-lg-5 align-items-center">
                 <div class="col-lg-6 mb-lg-5 mb-md-3 mb-0 mb-lg-0">
                   <img
+                  class="logo"
                     src="/static/images/jbt3-logo-png.png"
                     style="
-                      width: 200px;
-                      background-repeat: no-repeat;
-                      margin-right: 300px;
+                      height: 200px;
+                      width: auto;
+                      /* background-repeat: no-repeat; */
+                      /* margin-right: 300px; */
                       margin-top: -100px;
                     "
                   />
-                  <h6 class="my-4 display-4 fw-bold">
+                  <h6 class="my-4 display-4 fw-bold inno">
                     Innovation & <br />
                     <span
                       >Grant Eligibility<br />
@@ -80,7 +127,7 @@
                   </h6>
                 </div>
   
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="col-lg-6 mb-5 mb-lg-0 py-5">
                   <div
                     class="card loginRegister"
                     style="background-color: rgba(90, 152, 147, 0.75) !important"
@@ -146,7 +193,7 @@
                             border-radius: 30px;
                             /* background-color: #52aa9a; */
                             background-color: #52aa9a; /* For browsers that do not support gradients */
-  background-image: linear-gradient(#52aa9a, #32685e);
+                            background-image: linear-gradient(#52aa9a, #32685e);
                             color: aliceblue;
                             border-top:none;
                             border-bottom: none;
@@ -160,8 +207,8 @@
   
                       <!--  -->
   
-                      <div class="text-center mt-5">
-                        <p>Been here before? <a href="/register">Sign up</a></p>
+                      <div class="text-center signUpSmall mt-5">
+                        <p>Been here before? <a href="/register" class="text-white">Sign up</a></p>
                         Or Sign Up Using
                       </div>
                       <div class="text-center custm-bg mt-3">
@@ -271,6 +318,6 @@
           <!-- Jumbotron -->
         </section>
         <!-- Section: Design Block -->
-      </div>
+    </div>
 </body>
 </html>
