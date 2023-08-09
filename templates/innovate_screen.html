@@ -43,19 +43,26 @@ input{
 textarea {
     background: #52ad9c;
     border: none;
-    width: 40%;
+    width: 42%;
+    
     outline: none;
 }
 .heading p{
   width:75%;
+  font-size: 1.9rem;
 }
 @media all and (min-width: 1024px) and (max-width: 1280px) { }
  
-@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+  .textarea {
+    width: 60%;
+  }
+}
  
-@media all and (min-width: 480px) and (max-width: 768px) { 
+@media all and (min-width: 480px) and (max-width: 810px) { 
   .heading p{
     width:100%;
+    font-size: 1.4rem;
   }
 
   .textarea {
@@ -66,6 +73,7 @@ textarea {
 @media all and (max-width: 480px) { 
   .heading p{
     width:100%;
+    font-size: 1.4rem;
   }
 
   .textarea {
@@ -81,19 +89,19 @@ textarea {
     <div class="content_con">
     <div class="heading" style="color: aliceblue; margin-top: 40px;">
       <img src="/static/images/jbt3-logo-png.png" style="width:200px; background-repeat: no-repeat;margin-left: -35px;">
-        <p style="font-size: 1.9rem;"> Based on the information provided this is what we understand about your project</p>
+        <p> Based on the information provided this is what we understand about your project</p>
     </div>
     <div class="error" style="color: rgb(205, 47, 76);font-weight: 600;">{{message}}</div>
     <form method="post">
       {% csrf_token %}
     <div class="rad_ad" style="color:#f0f2f6; margin-top: 50px;font-size: 1.2rem;">
-        <div class="raid_ch">
+        <div class="raid_ch mb-3">
             <textarea class="textarea" rows="4" >{{ response.message }}</textarea>
         </div>
         <div class="buttons">
-            <button class="edit" style="border: none;color: #378a65;">EDIT</button>
-            <button class="accept" style="background-color: #378a65;color: #d2ebd5;border: none;">ACCEPT</button>
-            <button class="tryagain" style="border: none;color: #378a65;">TRY AGAIN</button>
+            <button class="edit" style="border: none;color: #52ad9c;">EDIT</button>
+            <button class="accept" style="background-color: #52ad9c;color: #d2ebd5;border: none;">ACCEPT</button>
+            <button class="tryagain" style="border: none;color: #52ad9c;">TRY AGAIN</button>
         </div>
     </div>
       <br><br>

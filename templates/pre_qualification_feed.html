@@ -21,6 +21,7 @@
     padding-top: 8px;
     border-radius: 15px;
     cursor: pointer;
+    margin-right: .5rem;
 }
 .tabscols {
     margin-left: 0px;
@@ -64,6 +65,9 @@
     transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     vertical-align: middle;
     cursor: pointer;
+}
+thead tr td{
+    padding-bottom: 0 !important;
 }
 .switch::before {
     content: '';
@@ -118,6 +122,12 @@ input:checked + .switch:active::before {
 .tab-switch {
   display: none;
 }
+.desc{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: end;
+}
 .desc img{
     height: 200px;
     width: auto;
@@ -125,6 +135,13 @@ input:checked + .switch:active::before {
 }
 .desc h2{
     margin-top: -135px;
+    margin-left: auto;
+    font-size: 3rem;
+    text-align: left;
+}
+.desc p{
+    
+    text-align: left;
 }
 .tab-label {
   /* position: relative; */
@@ -197,13 +214,16 @@ input:checked + .switch:active::before {
   } */
  }
  
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 810px) and (max-width: 1024px) {
     /* .content_con .row{
         flex-direction: column !important;
     } */
     /* .content_con .row .col-lg-9{
         max-width: 100%;
     } */
+    .tabscols{
+        width: unset !important;
+    }
     .oneZeroTwoFour{
         max-width: 100%;
         flex: unset !important;
@@ -214,9 +234,13 @@ input:checked + .switch:active::before {
     .oneZeroTwoFour .tabs .tab .tab-content{
         width: 100% ;
     }
+    .desc h2{
+    /* margin-top: unset; */
+    font-size: 1.4rem;
+}
  }
  
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 480px) and (max-width: 810px) {
 .tabs .tab{
     width:50%;
 }
@@ -235,6 +259,10 @@ input:checked + .switch:active::before {
 }
 .tab .tab-content{
     width: 100%;
+}
+.desc h2{
+    /* margin-top: unset; */
+    font-size: 1.4rem;
 }
  }
  
@@ -268,6 +296,14 @@ input:checked + .switch:active::before {
 }
 .desc h2{
     margin-top: unset;
+    font-size: 1.4rem;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
 }
  }
 
@@ -284,9 +320,14 @@ input:checked + .switch:active::before {
     <div class="row" >
         <div class="col-md-12 col-12 col-lg-9 " style="padding-top:60px; ">
             <div class="desc" >
-                <img src="/static/images/jbt3-logo-png.png">
-                <h2 style="text-align: right; ">JBT3 - PRE Qualification</h2>
-                <p style="text-align: right; font-size: 15px;">Submitted Monday, May 22, 2023 at 03:55PM PDT</p>
+                <div>
+
+                    <img src="/static/images/jbt3-logo-png.png">
+                </div>
+                <div>
+                    <h2 >JBT3 - PRE Qualification</h2>
+                    <p style=" font-size: 15px;">Submitted Monday, May 22, 2023 at 03:55PM PDT</p>
+                </div>
             </div>
             <div class="titleTab table-responsive">
                 <table class="table table-borderless" style="background-color: #419283; color: #fff;">
@@ -320,10 +361,10 @@ input:checked + .switch:active::before {
                 </div>
                 
                 <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">Highly Innovate</div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <p>JBT3 Scope</p>
                     <div class="switch_btn">
@@ -339,10 +380,10 @@ input:checked + .switch:active::before {
                    </div>
                 
                 <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">Highly Innovate</div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <p>JBT3 Scope</p>
                     <div class="switch_btn">
@@ -358,10 +399,10 @@ input:checked + .switch:active::before {
                  </div>
                 
                 <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">Highly Innovate</div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <p>JBT3 Scope</p>
                     <div class="switch_btn">
@@ -377,10 +418,10 @@ input:checked + .switch:active::before {
                 </div>
                 
                 <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">Highly Innovate</div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <p>JBT3 Scope</p>
                     <div class="switch_btn">

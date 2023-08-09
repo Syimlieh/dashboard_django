@@ -39,11 +39,14 @@
   margin-right: .5rem !important;
 }
 #next_proceed
-{width: 15%;}
+{width: 13%;}
 /* .content_con {
     width: 700px;
     margin-left: 100px;
 } */
+.heading p{
+  font-size: 2.9rem;
+}
 input[type='radio']{
   appearance: none;
   -webkit-appearance: none;
@@ -81,12 +84,15 @@ input[type="radio"]:checked:before {
 
 @media all and (min-width: 1024px) and (max-width: 1280px) { }
  
-@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 810px) and (max-width: 1024px) { }
  
-@media all and (min-width: 480px) and (max-width: 768px) { 
+@media all and (min-width: 480px) and (max-width: 810px) { 
   #next_proceed
   {
-    width: 45%;
+    width: 20%;
+  }
+  .heading p{
+    font-size: 2rem;
   }
 }
  
@@ -94,7 +100,13 @@ input[type="radio"]:checked:before {
 
   #next_proceed
   {
-    width: 45%;
+    width: 38%;
+  }
+  .heading p{
+    font-size: 1.8rem;
+  }
+  input[type="radio"]:checked::before {
+    left: 3.5px;
   }
 }
 
@@ -107,7 +119,7 @@ input[type="radio"]:checked:before {
     <div class="content_con">
     <div class="heading" style="color: aliceblue; margin-top: 40px;">
       <img src="/static/images/jbt3-logo-png.png" style="width:200px; background-repeat: no-repeat;margin-left: -35px;">
-        <p style="font-size: 2.9rem;"> What do you want to do?</p>
+        <p> What do you want to do?</p>
     </div>
     <div class="error" style="color: rgb(205, 47, 76);font-weight: 600;">{{message}}</div>
     <form method="post" enctype="multipart/form-data">
