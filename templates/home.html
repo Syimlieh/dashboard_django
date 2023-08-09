@@ -91,17 +91,38 @@ input[type="radio"]:checked:before {
 
 @media all and (min-width: 1024px) and (max-width: 1280px) { }
  
-@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 810px) and (max-width: 1024px) {
+  .heading h1{
+    font-size: 1.4rem;
+  }
+  .card-body h4{
+    font-size: 1.2rem !important;
+  }
+  input[type="radio"]:checked::before {
+    top: 3.5px !important;
+    left: 3.5px !important;
+  }
+ }
  
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 480px) and (max-width: 810px) {
   .card{
     margin-bottom: 1rem;
+  }
+  .card-body h4{
+    font-size: 1.2rem !important;
   }
   .btn_count{
     margin-bottom: 1rem;
   }
   .post{
     padding-bottom: 1rem;
+  }
+  .heading h1{
+    font-size: 1.4rem;
+  }
+  input[type="radio"]:checked::before {
+    top: 3.5px !important;
+    left: 3.5px !important;
   }
  }
  
@@ -114,6 +135,16 @@ input[type="radio"]:checked:before {
   }
   .post{
     padding-bottom: 1rem;
+  }
+  .heading h1{
+    font-size: 1.4rem;
+  }
+  .card-body h4{
+    font-size: 1.2rem !important;
+  }
+  input[type="radio"]:checked::before {
+    top: 3.5px !important;
+    left: 3.5px !important;
   }
  }
   </style>
