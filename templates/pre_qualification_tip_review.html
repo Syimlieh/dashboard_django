@@ -20,10 +20,37 @@
     height: 35px;
     padding-top: 8px;
     cursor: pointer;
+    border-radius: 15px;
+    text-align: center;
+    
 }
+button:focus{
+    outline: none;
+
+}
+.difColor{
+    background-color: #61e5d8 !important;
+    color: #fff !important;
+}
+.optionsBox{
+    width: 90%;
+}
+.second_tab p{
+    font-weight: 600;
+}
+body{
+        margin-bottom: 15rem;
+    }
+    .desc{
+        display: flex;
+        align-items: center;
+    }
+    .tabscols .col{
+        margin-right: .5rem;
+    }
 .tabscols {
     margin-left: 0px;
-    width: 820px;
+    /* width: 820px; */
     column-gap: 5px;
 }
 .active {background-color: #63aea9 !important; color: #fff !important;}
@@ -31,7 +58,7 @@
     color: #fff;
 }
 .second_tab {
-    width: 688px;
+    width: 100%;
     padding-top: 10px;
 }
 .small_tb{
@@ -79,7 +106,9 @@ input:checked + .switch::before {
 input:checked + .switch:active::before {
     box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
 }
-
+.text-p p{
+    text-align: end;
+}
 .wrapper {
   max-width: 50rem;
   width: 100%;
@@ -152,21 +181,174 @@ input:checked + .switch:active::before {
   background: #f2f2f2;
 }
 .editsave{text-align: right;padding-top: 5px;}
+.editsave .edit{ background-color: #fff; border: 1px solid #419283;}
+.editsave .save{border: 1px solid #419283;}
+.editsave .clear{
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.editsave .anelyze{
+    border: 1px solid #000;
+}
+.save{
+    background-color: #000;border:1px solid #000;color: #fff;
+}
+.pro_ques input, .ai_analy input{
+ text-align: center;   
+ border: 1px solid #1abc9c;
+}
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    /* .content_con .row{
+    flex-direction: column !important;
+  } */
+  
+ }
+ 
+@media all and (min-width: 810px) and (max-width: 1024px) {
+    /* .content_con .row{
+        flex-direction: column !important;
+    } */
+    /* .content_con .row .col-lg-9{
+        max-width: 100%;
+    } */
+    .tabs{
+        width: 80%;
+    }
+    .tabscols{
+        width: 30% !important;
+        display: block;
+
+    }
+    .tabscols .col{
+        margin-bottom: 1rem;
+    }
+    .oneZeroTwoFour{
+        max-width: 100%;
+        flex: unset !important;
+    }
+    .oneZeroTwoFour .tabs .tab{
+        width: 50% ;
+    }
+    .oneZeroTwoFour .tabs .tab .tab-content{
+        width: 100% ;
+    }
+    .desc h2{
+    /* margin-top: unset; */
+    font-size: 1.4rem;
+}
+ }
+ 
+@media all and (min-width: 480px) and (max-width: 810px) {
+.tabs .tab{
+    width:50%;
+}
+.tabs{
+        width: 80%;
+    }
+    body{
+        margin-bottom: 20rem;
+    }
+    .second_tab{
+        width: 100%;
+    }
+    .switch_btn{
+        display: flex;
+        justify-content: end;
+    }
+    .text-p p{
+        text-align: left;
+    }
+.tabscols{
+    width: 100%;
+    
+}
+.table-borderless {
+    /* display: flex; */
+    flex-direction: column;
+}
+.tabscols>.col {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.tab .tab-content{
+    width: 100%;
+}
+.desc h2{
+    /* margin-top: unset; */
+    font-size: 1.4rem;
+}
+ }
+ 
+@media all and (max-width: 480px) {
+    .tabs .tab{
+    width:50%;
+}
+body{
+        margin-bottom: 15rem;
+    }
+.table-borderless {
+    /* display: flex; */
+    flex-direction: column;
+}
+.second_tab{
+        width: 100%;
+    }
+.tabscols{
+    width: 100%;
+}
+.tabscols .col{
+    flex: 0 0 100%;
+    margin-bottom: .5rem;
+}
+.tab .tab-content{
+    width: 100%;
+    height: unset;
+}
+.tabs{
+    margin-bottom: 8rem ;
+    margin-top: 1rem;
+}
+.desc img{
+    height: 200px;
+    width: auto;
+    /* object-fit: contain; */
+}
+.desc h2{
+    margin-top: unset;
+    font-size: 1.4rem;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+}
+ }
+
+
+
   </style>
 </head>
-<body style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100%;">
+<body style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
 <div class="container" style="color: aliceblue;">
     <div class="second_con">
         <div class="content_con">
 
     <div class="row">
-        <div class="col-md-9 col-sm-9 col-lg-9">
-            <div class="desc" style="padding-top:60px;">
-                <img src="/static/images/jbt3-logo-png.png" style="width:200px";>
-                <h2 style="text-align: right; margin-top: -135px;">Grantify - A3: Problem & Solution</h2>
-                <p style="text-align: right; font-size: 15px;">Submitted Monday, May 22, 2023 at 03:55PM PDT</p>
+        <div class="col-md-12 col-12 col-lg-9" style="padding-top:60px;">
+            <div class="desc" >
+                <div>
+                    <img src="/static/images/jbt3-logo-png.png" style="width:200px";>
+                </div>
+                <div>
+                    <h2 >Grantify - A3: Problem & Solution</h2>
+                    <p style="font-size: 15px;">Submitted Monday, May 22, 2023 at 03:55PM PDT</p>
+                </div>
             </div>
-            <div class="titleTab">
+            <div class="titleTab table-responsive">
                 <table class="table table-borderless" style="background-color: #419283; color: #fff;">
                     <thead>
                     <tr>
@@ -193,72 +375,91 @@ input:checked + .switch:active::before {
             
         <div class="botom_tab">
             <div class="second_tab" style="padding-top:20px;">
-                <div class="row">
-                    <div class="col-8">1.&nbsp;&nbsp;What is the big issue you're addressing?</div>
-                </div>
-                
-                <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p>JBT3 Scope</p>
-                    <div class="switch_btn">
-                        <input type="checkbox" hidden="hidden" id="scope_1">
-                        <label class="switch" for="scope_1"></label>
+                <div class="row mb-2">
+                    <div class="col-12  col-lg-9"><p>1.&nbsp;&nbsp;What is the big issue you're addressing?</p></div>
+                    <div class="col-12 col-lg-3 ">
+                        <div class="row">
+
+                            <div class="col-md-7 col-6 text-p">
+                                <p>JBT3 Scope</p>
+                            </div>
+                            <div class="switch_btn col-6 col-md-5">
+                                <input type="checkbox" hidden="hidden" id="scope_1">
+                                <label class="switch" for="scope_1"></label>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="row tabscols optionsBox">
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">Highly Innovative</div>
+                    <div class="col difColor">Innovative</div>
+                    
                 </div>
             </div>
             <br>
             <div class="second_tab">
-                <div class="row">
-                    <div class="col-8">2.&nbsp;&nbsp;What is the key technical challenge or reason why the problem has not yet been solved?</div>
-                   </div>
-                
-                <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p>JBT3 Scope</p>
-                    <div class="switch_btn">
-                        <input type="checkbox" hidden="hidden" id="scope_2">
-                        <label class="switch" for="scope_2"></label>
+                <div class="row mb-2">
+                    <div class="col-12  col-lg-9"><p>2.&nbsp;&nbsp;What is the key technical challenge or reason why the problem has not yet been solved?</p></div>
+                    <div class="col-12 col-lg-3 ">
+                        <div class="row">
+                            <div class="col-md-7 col-6 text-p">
+                                <p>JBT3 Scope</p>
+                            </div>
+                            <div class="switch_btn col-6 col-md-5">
+                                <input type="checkbox" hidden="hidden" id="scope_2">
+                                <label class="switch" for="scope_2"></label>
+                            </div>
+                        </div>
                     </div>
+                </div>
+    
+                <div class="row tabscols optionsBox">
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">Highly Challenging</div>
+                    <div class="col difColor">Innovative</div>
                   </div>
             </div>
             <br>
             <div class="second_tab">
-                <div class="row">
-                    <div class="col-8">3.&nbsp;&nbsp;Is the problem described in 3-A1 and 3A2 disproportionately affecting a certain ethnic, socioeconomic location of the UK or other group.</div>
-                 </div>
-                
-                <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p>JBT3 Scope</p>
-                    <div class="switch_btn">
-                        <input type="checkbox" hidden="hidden" id="scope_3">
-                        <label class="switch" for="scope_3"></label>
+                <div class="row mb-2">
+                    <div class="col-12  col-lg-9"><p>3.&nbsp;&nbsp;Is the problem described in 3-A1 and 3A2 disproportionately affecting a certain ethnic, socioeconomic location of the UK or other group.</p></div>
+                    <div class="col-12 col-lg-3 ">
+                        <div class="row">
+                            <div class="col-md-7 col-6 text-p">
+                                <p>JBT3 Scope</p>
+                            </div>
+                            <div class="switch_btn col-6 col-md-5">
+                                <input type="checkbox" hidden="hidden" id="scope_3">
+                                <label class="switch" for="scope_3"></label>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                
+                <div class="row tabscols optionsBox">
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">High</div>
+                    <div class="col difColor">Innovative</div>
                   </div>
             </div>
-            <br>
+            <!-- <br>
             <div class="second_tab">
-                <div class="row">
-                    <div class="col-8">4.&nbsp;&nbsp;Is this project commercially risky</div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-10 col-lg-8">4.&nbsp;&nbsp;Is this project commercially risky</div>
                 </div>
                 
                 <div class="row tabscols">
-                    <div class="col">&#128557; No</div>
-                    <div class="col">&#128531; some</div>
-                    <div class="col">&#128577; Innovate</div>
-                    <div class="col active">&#128519; Highly Innovate</div>
+                    <div class="col">No</div>
+                    <div class="col">some</div>
+                    <div class="col">Innovate</div>
+                    <div class="col active">Highly Innovate</div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <p>JBT3 Scope</p>
                     <div class="switch_btn">
@@ -266,11 +467,11 @@ input:checked + .switch:active::before {
                         <label class="switch" for="scope_4"></label>
                     </div>
                   </div>
-            </div>
+            </div> -->
             </div>
         </div>
 
-        <div class="col-md-3 col-sm-3 col-lg-3">
+        <div class="col-md-12 col-12 col-lg-3 oneZeroTwoFour">
             <div class="wrapper">
             <div class="tabs">
                 <div class="tab">
