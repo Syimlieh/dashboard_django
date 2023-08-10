@@ -137,16 +137,6 @@
       top: 25%;
       left: 50%;
       transform: translateX(-50%);
-    .gauge__cover {
-      width: 75%;
-      height: 150%;
-      background: rgba(29, 33, 40, 1);
-      border-radius: 50%;
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      transform: translateX(-50%);
-
       /* Text */
       display: flex;
       align-items: center;
@@ -212,121 +202,7 @@
 
     }
 
-    @media all and (min-width: 1024px) and (max-width: 1280px) {}
 
-    @media all and (min-width: 810px) and (max-width: 1024px) {
-      .radioCard {
-        width: 85%;
-      }
-    }
-
-    @media all and (min-width: 480px) and (max-width: 810px) {
-      .gauge {
-        margin-left: unset;
-        width: auto;
-        margin-top: unset !important;
-      }
-
-      .radioCard {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .radioCard .card {
-        margin-bottom: 1rem;
-      }
-
-      .card-text br {
-        display: none;
-      }
-    }
-
-    @media all and (max-width: 480px) {
-      .gauge {
-        margin-left: unset;
-        width: auto;
-        margin-top: unset !important;
-      }
-
-      .radioCard {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .radioCard .card {
-        margin-bottom: 1rem;
-      }
-
-      .card-text br {
-        display: none;
-      }
-    }
-      /* Text */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 25%;
-      box-sizing: border-box;
-    }
-
-    .form-control:focus {
-      box-shadow: unset !important;
-    }
-
-    .center_div {
-      margin-top: 50px;
-      width: 100%;
-      margin-left: unset;
-    }
-
-    .card-body {
-      padding: 2.5rem !important;
-    }
-
-    input[type='radio'] {
-      appearance: none;
-      -webkit-appearance: none;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
-      text-align: center;
-      background: none !important;
-      background-color: transparent !important;
-      outline: none;
-      /* Remove outline on focus */
-      margin: 0;
-      /* Remove default margin */
-      border: 2px solid white;
-      /* Add a white border for the outline */
-      border-radius: 50%;
-      position: relative;
-      /* Add relative position */
-    }
-
-    input[type="radio"]:checked:before {
-      content: "";
-      position: absolute;
-      /* Position the filled part absolutely */
-      top: 3.5px;
-      /* Adjust the vertical position */
-      left: 3.5px;
-      /* Adjust the horizontal position */
-      width: 10px;
-      /* Adjust the size */
-      margin: auto;
-      text-align: center;
-      height: 10px;
-      /* Adjust the size */
-      border-radius: 50%;
-      background-color: #fff;
-      /* Set the color for checked radio button */
-
-    }
 
     @media all and (min-width: 1024px) and (max-width: 1280px) {}
 
@@ -382,10 +258,10 @@
   </style>
 </head>
 
+
 <body
   style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
-<body
-  style="background-image: url('/static/images/background-version-1-Grant-review-web-screen.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+
 
   <div class="container" style="color: aliceblue;border-radius: 25px;">
     <div class="center_div">
@@ -410,45 +286,8 @@
           </div>
         </div>
       </div>
-  <div class="container" style="color: aliceblue;border-radius: 25px;">
-    <div class="center_div">
-      <br>
-      <h2> jbt3</h2>
-      <br>
-      <p style="font-size: 30px;">Innovation Score</p>
-      <div class="innovationScore">
-        <div class="card " style="color: aliceblue;">
-          <div class="card-body">
-            <h5 class="card-title">Innovative</h5>
-            <p class="card-text">The project have several strengths and is <br> competitive for grant funding.
-              Some minor <br> improvements may be needed but overall the<br> proposal is strong.</p>
-          </div>
-          <div class="gauge">
-            <div class="gauge__body">
-              <div class="gauge__fill"></div>
-              <div class="gauge__cover"></div>
-            </div>
 
-            <label style="color: #fff;font-size: 12px;margin-left: 60px;">Grant Qualification Score</label>
-          </div>
-        </div>
-      </div>
-
-      <br><br>
-      <div class="row">
-        <div class="col-md-12 mb-3">
-          <h4>Which Grant is the client applying for?</h4>
-        </div>
-
-
-      </div>
-      <div class="row radioCard m-0">
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="card card1">
-            <div class="card-body d-flex align-items-center">
-              <input type="radio" class=" mr-2" name="optradio" checked>
-              <p class="card-text">Feasibility study</p>
-      <br><br>
+     
       <div class="row">
         <div class="col-md-12 mb-3">
           <h4>Which Grant is the client applying for?</h4>
@@ -465,11 +304,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="card card2">
-            <div class="card-body d-flex align-items-center">
-              <input type="radio" class=" mr-2" name="optradio" value="white">
-              <p class="card-text">Project scoping</p>
+       
         <div class="col-lg-4 col-md-6 col-12">
           <div class="card card2">
             <div class="card-body d-flex align-items-center">
